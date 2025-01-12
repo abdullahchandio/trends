@@ -1,35 +1,42 @@
 .product-gallery {
     display: flex;
     gap: 20px;
+    align-items: stretch;
 }
 
 .thumbnail-swiper {
     width: 100px !important;
-    height: 600px !important;
+    max-height: 600px !important;
     margin-right: 20px;
+    overflow: hidden;
 }
 
 .thumbnail-swiper .swiper-slide {
-    width: 100px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     opacity: 0.6;
     cursor: pointer;
     border: 1px solid #ddd;
+    transition: opacity 0.3s, transform 0.3s;
     margin-bottom: 10px;
 }
 
 .thumbnail-swiper .swiper-slide-thumb-active {
     opacity: 1;
-    border: 1px solid #dc3545;
+    border: 2px solid #dc3545;
+    transform: scale(1.05);
 }
 
 .main-swiper {
-    width: calc(100% - 120px) !important;
-    height: 880px !important;
+    flex: 1;
+    height: auto;
 }
 
 .main-swiper .swiper-slide {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -39,6 +46,21 @@
     object-fit: cover;
 }
 
+.zoom-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.zoom-icon:hover {
+    transform: scale(1.2);
+}
 .zoom-icon {
     position: absolute;
     top: 10px;
@@ -221,6 +243,6 @@
 
 @media (max-width: 768px) {
     .thumbnail-swiper{
-        display: none;
+        display: none !important;
     }
 }
