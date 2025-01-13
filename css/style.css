@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -7,29 +6,25 @@
     scroll-behavior: smooth;
     font-family: Figtree;
 }
-
 html,
 body {
     width: 100%;
     height: 100%;
 }
-
 :root {
     --primary-color: #C22B4C;
     --Secondary-color: #FFF1F1;
 }
-
 #root {
     width: 100%;
     height: 100%;
 }
-
 @font-face {
     font-family: Felix;
     src: url('../Assets/font/Felixti.TTF');
 }
-
 /* Header section  */
+
 /* topbar css */
 .tagline {
     height: 28px;
@@ -39,7 +34,7 @@ body {
     width: 100%;
 }
 
-.tagline>span {
+.tagline > span {
     font-size: 13px;
     font-weight: 600;
     font-family: Figtree;
@@ -97,32 +92,43 @@ body {
     height: 28px;
     background-color: var(--Secondary-color);
     color: var(--primary-color);
-    text-align: center;
     width: 100%;
     display: flex;
     align-items: center;
-    overflow: hidden;
-}
-
-.marquee-container {
+    overflow: hidden; 
+  }
+  
+  .marquee-container {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-marquee {
+    position: relative;
+    overflow: hidden; /* Prevents overflow of scrolling text */
+  }
+  
+  .marquee {
+    display: inline-block;
+    white-space: nowrap; 
+    animation: scrollRightToLeft 30s linear infinite; /* Adjust speed here */
+  }
+  
+  .marquee span {
+    display: inline-block;
+    padding-right: 50px; 
+    font-family: Figtree;
     font-size: 12px;
     line-height: 28px;
-    white-space: nowrap;
-}
-
-marquee>span {
-    display: inline-block;
-    font-family: Figtree;
-}
-
+  }
+  
+  /* Keyframes for scrolling right to left */
+  @keyframes scrollRightToLeft {
+    0% {
+      transform: translateX(500%); 
+    }
+    100% {
+      transform: translateX(-500%);
+    }
+  }
+  
 /* main-navbar */
 .navbar-nav {
     font-family: Figtree;
@@ -224,7 +230,6 @@ marquee>span {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
-    /* Ensure no unexpected margin is causing the overlap */
 }
 
 /* Mobile Swiper Styles */
@@ -392,7 +397,10 @@ marquee>span {
     gap: 20px;
     font-family: Figtree;
 }
-
+.product-container > a{
+    color: #000;
+    text-decoration: none;
+}
 .productSection:last-child{
     text-align: center;
 }
@@ -488,50 +496,180 @@ marquee>span {
     cursor: pointer;
     text-decoration: none;
 }
-
+/* Sidebar Container */
 .cart-sidebar {
     position: fixed;
     top: 0;
     right: -400px;
-    width: 400px;
+    width: 350px;
     height: 100%;
-    background: #f8f9fa;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
     transition: right 0.3s ease;
     z-index: 1050;
     overflow-y: auto;
-}
-
-.cart-sidebar.open {
+    padding: 20px;
+    border-left: 4px solid #c22b4c;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Open Sidebar */
+  .cart-sidebar.open {
     right: 0;
-}
-
-.cart-header {
-    padding: 1rem;
-    background-color: #c22b4c;
-    color: white;
-}
-
-.cart-items {
-    padding: 1rem;
-}
-
-.cart-footer {
-    padding: 1rem;
-    background: #f1f1f1;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.close-btn {
+  }
+  
+  /* Header */
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .cart-header h5 {
+    margin: 0;
+  }
+  
+  .cart-header .close-btn {
     background: none;
     border: none;
-    color: white;
     font-size: 1.5rem;
+    color: #333;
     cursor: pointer;
-}
-
+  }
+  
+  /* Cart Item */
+  .cart-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Single Cart Item */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f2f2f2;
+    color: #555;
+  }
+  
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+  
+  .cart-item .product-info {
+    flex-grow: 1;
+  }
+  
+  .cart-item .product-info h6 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .cart-item .product-info small {
+    font-size: 0.875rem;
+    color: #777;
+  }
+  
+  .cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item .quantity-controls button {
+    background: #f1f1f1;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .cart-item .remove-btn {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-size: 0.875rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Accordion */
+  .accordion-button {
+    background-color: #f8f9fa;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .accordion-body {
+    padding: 15px;
+    background-color: #f8f9fa;
+  }
+  
+  .accordion-body textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Total Section */
+  #total-price {
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Subtotal and Shipping */
+  #cart-total-sidebar {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Bottom Section */
+  #checkout-btn {
+    background-color: #c22b4c;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  #checkout-btn:hover {
+    background-color: #9b2030;
+  }
+  
 /* endddd */
 .view-more-btn:hover {
     background-color: var(--primary-color);
@@ -573,46 +711,39 @@ marquee>span {
 .banner-section .lead {
     font-size: 1.25rem;
     margin-bottom: 20px;
-}/* Testimonial Section */
+}
+/* Testimonial Section */
 .testimonial-section {
     padding: 60px 0;
     position: relative;
 }
-
 .testimonial-container {
     overflow: hidden;
     position: relative;
     padding: 0 50px;
 }
-
 .testimonial-track {
     display: flex;
     transition: transform 0.5s ease;
 }
-
 .testimonial-card {
     flex: 0 0 50%;
     padding: 15px;
     min-width: 50%;
 }
-
 .card {
     border-radius: 15px;
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
     padding: 20px;
 }
-
-.testimonial-image {
+.testimonial-image > img {
     width: 100px;
     height: 100px;
     border-radius: 10px;
     object-fit: cover;
 }
-
 .star-rating {
     color: #ffc107;
 }
-
 .nav-button {
     position: absolute;
     top: 50%;
@@ -644,6 +775,11 @@ marquee>span {
         min-width: 100%;
     }
 }
+@media (max-width: 480px) {
+    .testimonial_media{
+        flex-direction: column;
+    }
+}
   /*end  */
   .email-signup {
     background-color: #f8f9fa;
@@ -673,31 +809,67 @@ marquee>span {
     height: 50px;
     margin-bottom: 15px;
 }
-
-.features-section {
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.feature-item {
+/* Features Section */
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    font-family: Figtree;
     text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease;
 }
 
-.feature-item:hover {
+.feature-card {
+    padding: 10px;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.feature-card:hover {
     transform: translateY(-5px);
 }
 
+.feature-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+}
+
 .feature-title {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
 .feature-subtitle {
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .features-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .feature-title {
+        font-size: 1rem;
+    }
+
+    .feature-subtitle {
+        font-size: 0.9rem;
+    }
 }
 
 .footer {

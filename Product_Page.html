@@ -15,7 +15,6 @@
 </head>
 <body>
       <!-- header -->
-      <!-- header -->
       <header>
         <div class="tagline">
           <span>Get free shipping</span>
@@ -165,11 +164,11 @@
         </div>
         <div class="off">
           <div class="marquee-container">
-            <marquee behavior="smooth" direction="left">
+            <div class="marquee">
               <span>Flat 40% off Avail now</span>
-            </marquee>
+            </div>
           </div>
-        </div>
+        </div>        
         <!-- main-navabr-start -->
         <!-- Desktop Navigation -->
         <nav class="navbar navbar-expand-lg d-none d-lg-block">
@@ -226,7 +225,7 @@
               <!-- Login Icon -->
               <a
                 href="./Login.html"
-                class="nav-link d-flex flex-column align-items-center mx-2"
+                class="nav-link d-flex flex-column align-items-center"
               >
                 <svg
                   width="26"
@@ -253,7 +252,7 @@
               <a
                 href="#"
                 id="cart-icon"
-                class="d-flex align-items-center text-decoration-none text-dark flex-column mx-2 p-2"
+                class="d-flex align-items-center text-decoration-none text-dark flex-column "
                 
               >
                 <svg
@@ -301,7 +300,7 @@
         <!-- Mobile Menu Offcanvas -->
         <div class="offcanvas offcanvas-start" id="mobileMenu">
           <div class="offcanvas-header">
-            <img class="offcanvas-title" src="./Assets/Logo.png"/>
+            <img class="offcanvas-title" src="./Assets/Logo.png" height="50"/>
             <button
               type="button"
               class="btn-close"
@@ -558,35 +557,154 @@
         <img src="/placeholder.svg" alt="Zoomed Product Image">
     </div>
     <!--  -->
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <h2 class="reviews-heading">REVIEWS</h2>
-        <div class="reviews-heading-line mb-3"></div>
-        <div class="overall-rating">
-            <span class="h4">5/5</span>
-            <div class="star-rating">★★★★★</div>
-        </div>
-        
-        <div class="swiper review-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="review-card">
-                        <div class="reviewer-info">
-                            <img src="./Assets/rewiews.png" alt="Saima Qadeer" class="reviewer-avatar">
-                            <div>
-                                <div class="reviewer-name">Saima Qadeer</div>
-                                <div class="star-rating">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="review-text">Apparel is amazing! The clothes are stylish, comfortable, and great quality. Shopping was fast, and customer service was super helpful. Highly recommend!</p>
+      <!-- Testimonials Section -->
+      <section class="testimonial-section">
+        <div class="container">
+          <h2 class="text-center mb-5">We Value Your Support.</h2>
+          <div class="testimonial-container">
+            <button class="nav-button prev-button">←</button>
+            <button class="nav-button next-button">→</button>
+            <div class="testimonial-track">
+              <!-- Card 1 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Jan 7, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Maha Touqeer
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
                     </div>
+                  </div>
                 </div>
-                <!-- Additional review slides can be added here -->
+              </div>
+              <!-- Card 2 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Feb 14, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Sarah Ahmed
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Mar 21, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Aisha Khan
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Apr 3, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Zara Hassan
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+          </div>
         </div>
-    </section>
+      </section>
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -656,8 +774,8 @@
         </div>
       </div>
     </footer>
-    <!-- add to js  -->
-     <script src="./js/addtocart.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/addtocart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -740,6 +858,37 @@ const reviewSwiper = new Swiper('.review-swiper', {
         }
     }
 });
+      document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector(".testimonial-track");
+        const cards = document.querySelectorAll(".testimonial-card");
+        const prevButton = document.querySelector(".prev-button");
+        const nextButton = document.querySelector(".next-button");
+
+        let currentIndex = 0;
+        const cardWidth = 100 / (window.innerWidth >= 768 ? 2 : 1); // Show 2 cards on desktop, 1 on mobile
+
+        function updateSlider() {
+          track.style.transform = `translateX(-${currentIndex * cardWidth}%)`;
+        }
+
+        prevButton.addEventListener("click", () => {
+          currentIndex = Math.max(currentIndex - 1, 0);
+          updateSlider();
+        });
+
+        nextButton.addEventListener("click", () => {
+          const maxIndex = cards.length - (window.innerWidth >= 768 ? 2 : 1);
+          currentIndex = Math.min(currentIndex + 1, maxIndex);
+          updateSlider();
+        });
+
+        // Update cards shown on window resize
+        window.addEventListener("resize", () => {
+          const maxIndex = cards.length - (window.innerWidth >= 768 ? 2 : 1);
+          currentIndex = Math.min(currentIndex, maxIndex);
+          updateSlider();
+        });
+      });
 
     </script>
 </body>
