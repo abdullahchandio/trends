@@ -882,8 +882,8 @@ body {
     }
 }
 .footer h5 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -897,9 +897,9 @@ body {
 }
 
 .footer ul li a {
-    color: #666;
+    color: #000;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .footer ul li a:hover {
@@ -922,6 +922,17 @@ body {
     padding-top: 20px;
     margin-top: 30px;
     border-top: 1px solid #ddd;
-    font-size: 14px;
-    color: #666;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+.account-options > a:first-child{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+.account-options a{
+    text-decoration: none;
+    color: #000;
 }
