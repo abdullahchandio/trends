@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <button class="increase-btn">+</button>
         </div>
         <button class="remove-btn">Remove</button>
+        <small>Subtotal: Rs.${item.price * item.quantity}</small>
       `;
 
       cartItem.querySelector('.decrease-btn').addEventListener('click', () => {
