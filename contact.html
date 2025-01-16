@@ -60,7 +60,7 @@
             font-size: 18px;
         }
 
-        .form-control {
+        /* .form-control {
             border: 1px solid #ddd;
             padding: 12px;
             margin-bottom: 20px;
@@ -69,7 +69,7 @@
         .form-control:focus {
             box-shadow: none;
             border-color: #dc3545;
-        }
+        } */
 
         .submit-btn {
             background: #000;
@@ -507,21 +507,21 @@
                         <form id="contactForm" novalidate>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                    <input type="text" class="form-control search-bar py-3" id="name" placeholder="Name" required>
                                     <div class="error-message" id="nameError">Please enter your name</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <input type="email" class="form-control search-bar py-3" id="email" placeholder="Email" required>
                                     <div class="error-message" id="emailError">Please enter a valid email address</div>
                                 </div>
                             </div>
-                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+                            <input type="tel" class="form-control search-bar py-3" id="phone" placeholder="Phone number" required>
                             <div class="error-message" id="phoneError">Please enter a valid phone number</div>
                             
-                            <textarea class="form-control" id="message" rows="5" placeholder="Comment" required></textarea>
+                            <textarea class="form-control search-bar py-3" id="message" rows="5" placeholder="Comment" required></textarea>
                             <div class="error-message" id="messageError">Please enter your message</div>
 
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <button type="submit" class="submit-btn mt-3">Send Message</button>
                         </form>
                     </div>
                 </div>
