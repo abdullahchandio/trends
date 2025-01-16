@@ -27,6 +27,16 @@
     />
   </head>
   <body>
+    <div id="loading-wrapper">
+      <div id="logo-wrapper">
+        <img id="logo" src="./Assets/Logo.png" alt="Logo">
+      </div>
+      <!-- <div id="loading-text">LOADING</div> -->
+      <div id="loading-content"></div>
+    </div>
+    
+    
+    
     <div id="root">
       <!-- header -->
       <header>
@@ -204,7 +214,7 @@
                   <a class="nav-link" href="#">HOME APPLIANCES</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">SALE</a>
+                  <a class="nav-link" href="./product-listing.html">SALE</a>
                 </li>
               </ul>
               <form class="search-form ms-auto">
@@ -336,7 +346,7 @@
                 <a class="nav-link" href="#">HOME APPLIANCES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">SALE</a>
+                <a class="nav-link" href="./product-listing.html">SALE</a>
               </li>
             </ul>
           </div>
@@ -1044,35 +1054,33 @@
               </ul>
             </div>
 
-            <!-- Need Help Column -->
-<div class="col-lg-3 col-sm-6">
-  <h5 class="text-uppercase mb-4 font-weight-bold">Need Help?</h5>
-  <ul class="list-unstyled mb-4">
-    <li class="mb-2 d-flex align-items-center">
-      <img src="./Assets/SVG/phone-icon.svg" alt="Phone Icon" class="me-2">
-      <a href="tel:02323233232" class="font-weight-bold">02323233232</a>
-    </li>
-    <li class="mb-2 d-flex align-items-center">
-      <img src="./Assets/SVG/phone-icon-alt.svg" alt="Alt Phone Icon" class="me-2">
-      <a href="tel:0322033443" class="font-weight-bold">0322033443</a>
-    </li>
-    <li class="mb-2 d-flex align-items-center">
-      <img src="./Assets/SVG/email-icon.svg" alt="Email Icon" class="me-2">
-      <a href="mailto:info@trends.com" class="font-weight-bold">info@trends.com</a>
-    </li>
-  </ul>
-  <div class="account-options">
-    <a href="#" class="d-block">My Account</a>
-    <a href="./Login.html" class="d-block">Sign In</a>
-  </div>
-</div>
-
-
+                        <!-- Need Help Column -->
+            <div class="col-lg-3 col-sm-6">
+              <h5 class="text-uppercase mb-4 font-weight-bold">Need Help?</h5>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2 d-flex align-items-center">
+                  <img src="./Assets/SVG/phone-icon.svg" alt="Phone Icon" class="me-2">
+                  <a href="tel:02323233232" class="font-weight-bold">02323233232</a>
+                </li>
+                <li class="mb-2 d-flex align-items-center">
+                  <img src="./Assets/SVG/phone-icon-alt.svg" alt="Alt Phone Icon" class="me-2">
+                  <a href="tel:0322033443" class="font-weight-bold">0322033443</a>
+                </li>
+                <li class="mb-2 d-flex align-items-center">
+                  <img src="./Assets/SVG/email-icon.svg" alt="Email Icon" class="me-2">
+                  <a href="mailto:info@trends.com" class="font-weight-bold">info@trends.com</a>
+                </li>
+              </ul>
+              <div class="account-options">
+                <a href="#" class="d-block">My Account</a>
+                <a href="./Login.html" class="d-block">Sign In</a>
+              </div>
+            </div>
             <!-- Customer Care Column -->
             <div class="col-lg-3 col-sm-6">
               <h5 class="text-uppercase mb-4">Customer Care</h5>
               <ul class="list-unstyled mb-0">
-                <li class="mb-2"><a href="#">Contact Us</a></li>
+                <li class="mb-2"><a href="./contact.html">Contact Us</a></li>
                 <li class="mb-2"><a href="#">Delivery & Orders</a></li>
                 <li class="mb-2"><a href="#">Terms and Conditions</a></li>
                 <li class="mb-2"><a href="#">Payment Guide</a></li>
@@ -1150,6 +1158,28 @@
           updateSlider();
         });
       });
+
+
+      // custom - loader
+      document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.getElementById("logo");
+
+  // Check if logo image loads correctly
+  logo.onload = () => {
+    console.log("Logo loaded successfully.");
+  };
+
+  logo.onerror = () => {
+    console.error("Failed to load logo. Please check the URL.");
+  };
+
+  // Simulate loading completion after 3 seconds (optional)
+  setTimeout(() => {
+    document.getElementById("loading-wrapper").style.display = "none";
+  }, 3000);
+});
+
+
     </script>
     <script src="./js/slider.js"></script>
     <script src="./js/addtocart.js"></script>
