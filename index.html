@@ -217,14 +217,16 @@
                   <a class="nav-link" href="./product-listing.html">SALE</a>
                 </li>
               </ul>
-              <form class="search-form ms-auto">
+              <form class="search-form ms-auto" id="searchForm">
                 <input
                   class="form-control search-bar"
                   type="search"
+                  id="searchInput"
                   placeholder="Search"
                   aria-label="Search"
                 />
               </form>
+              
             </div>
           </div>
         </nav>
@@ -514,7 +516,7 @@
               class="product-image"
             />
             <article class="product-info">
-              <h2 class="product-title">Article 1</h2>
+              <h2 class="product-title ">Article 1</h2>
               <p class="product-price">
                 <span class="sale-price" data-price="99">Rs 99.00</span>
                 <span class="original-price">Rs 199.00</span>
@@ -1179,6 +1181,15 @@
   }, 3000);
 });
 
+document.getElementById("searchForm").addEventListener("submit", function (event) {
+    event.preventDefault(); 
+    const query = document.getElementById("searchInput").value.trim(); 
+    if (query) {
+        window.location.href = `/search.html?query=${encodeURIComponent(query)}`;
+    } else {
+        alert("Please enter a search term.");
+    }
+});
 
     </script>
     <script src="./js/slider.js"></script>

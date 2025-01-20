@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-    
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
     <style>
         /* Sidebar Styles */
         .sidebar {
@@ -168,6 +171,13 @@
     </style>
 </head>
 <body>
+  <div id="loading-wrapper">
+    <div id="logo-wrapper">
+      <img id="logo" src="./Assets/Logo.png" alt="Logo">
+    </div>
+    <!-- <div id="loading-text">LOADING</div> -->
+    <div id="loading-content"></div>
+  </div>
     <!-- header -->
     <header>
             <div class="tagline">
@@ -324,163 +334,213 @@
               </div>
             </div>        
             <!-- main-navabr-start -->
-            <!-- Desktop Navigation -->
-            <nav class="navbar navbar-expand-lg d-none d-lg-block">
-              <div class="container">
-                <div class="placeholder-box"></div>
-    
-                <div class="collapse navbar-collapse">
-                  <ul class="navbar-nav align-items-center">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">FOR WOMEN</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">FOR MEN</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">FOR KIDS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">HOME APPLIANCES</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">SALE</a>
-                    </li>
+<!-- Desktop Navigation -->
+<nav class="navbar navbar-expand-lg d-none d-lg-block border-bottom">
+  <div class="container">
+      <div class="placeholder-box"></div>
+
+      <div class="collapse navbar-collapse">
+          <ul class="navbar-nav align-items-center">
+              <!-- For Women Dropdown -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      FOR WOMEN
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">LUXURY FORMALS '24</a></li>
+                      <li><a class="dropdown-item" href="#">DIVANI '24</a></li>
+                      <li><a class="dropdown-item" href="#">DASTANGOI '24</a></li>
+                      <li><a class="dropdown-item" href="#">HAYAT '24</a></li>
+                      <li><a class="dropdown-item" href="#">SHEHNAI '24</a></li>
+                      <li><a class="dropdown-item" href="#">LA FUCHSIA '24</a></li>
+                      <li><a class="dropdown-item" href="#">CHIFFON '24</a></li>
                   </ul>
-                  <form class="search-form ms-auto">
-                    <input
-                      class="form-control search-bar"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                  </form>
-                </div>
-              </div>
-            </nav>
-    
-            <!-- Mobile Navigation -->
-            <nav class="navbar bg-white py-3 d-lg-none">
-              <div class="container">
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#mobileMenu"
-                >
-                  <i class="bi bi-list fs-4"></i>
-                </button>
-    
-                <a class="navbar-brand" href="#">
-                  <img src="./Assets/Logo.png" alt="Logo" />
-                </a>
-    
-                <div class="d-flex align-items-center">
-                  <!-- Login Icon -->
-                  <a
-                    href="./Login.html"
-                    class="nav-link d-flex flex-column align-items-center"
-                  >
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 26 26"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-miterlimit="10"
-                      />
-                    </svg>
+              </li>
+
+              <!-- For Men Dropdown -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      FOR MEN
                   </a>
-                  <!-- Cart Icon -->
-                  <a
-                    href="#"
-                    id="cart-icon"
-                    class="d-flex align-items-center text-decoration-none text-dark flex-column "
-                    
-                  >
-                    <svg
-                      width="26"
-                      height="26"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                    >
-                      <path
-                        d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    <!-- <span id="cart-total" class="ms-2">Rs.0</span> -->
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Formal Wear</a></li>
+                      <li><a class="dropdown-item" href="#">Casual Wear</a></li>
+                      <li><a class="dropdown-item" href="#">Accessories</a></li>
+                  </ul>
+              </li>
+
+              <!-- For Kids Dropdown -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      FOR KIDS
                   </a>
-                </div>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Girls</a></li>
+                      <li><a class="dropdown-item" href="#">Boys</a></li>
+                      <li><a class="dropdown-item" href="#">Infants</a></li>
+                  </ul>
+              </li>
+
+              <!-- Home Appliances Dropdown -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      HOME APPLIANCES
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Kitchen</a></li>
+                      <li><a class="dropdown-item" href="#">Living Room</a></li>
+                      <li><a class="dropdown-item" href="#">Bedroom</a></li>
+                  </ul>
+              </li>
+
+              <!-- Sale Dropdown -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      SALE
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Women</a></li>
+                      <li><a class="dropdown-item" href="#">Men</a></li>
+                      <li><a class="dropdown-item" href="#">Kids</a></li>
+                      <li><a class="dropdown-item" href="#">Home</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <form class="search-form ms-auto">
+              <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search">
+          </form>
+      </div>
+  </div>
+</nav>
+
+<!-- Mobile Navigation -->
+<nav class="navbar bg-white py-3 d-lg-none border-bottom">
+  <div class="container">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="bi bi-list fs-4"></i>
+      </button>
+
+      <div class="d-flex align-items-center gap-3">
+          <a href="./Login.html" class="nav-link">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z" stroke="#C22B4C" stroke-width="0.9" stroke-miterlimit="10"/>
+                  <path d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615" stroke="#C22B4C" stroke-width="0.9" stroke-miterlimit="10"/>
+              </svg>
+          </a>
+          <a href="#" class="nav-link">
+              <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z" stroke="#C22B4C" stroke-width="0.9" stroke-linecap="round"/>
+                  <path d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933" stroke="#C22B4C" stroke-width="0.9" stroke-linecap="round"/>
+              </svg>
+          </a>
+      </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Offcanvas -->
+<div class="offcanvas offcanvas-start" id="mobileMenu">
+  <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+      <div class="accordion" id="mobileAccordion">
+          <!-- For Women -->
+          <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#womenCollapse">
+                      FOR WOMEN
+                  </button>
+              </h2>
+              <div id="womenCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                  <div class="accordion-body ps-0">
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="nav-link">LUXURY FORMALS '24</a></li>
+                          <li><a href="#" class="nav-link">DIVANI '24</a></li>
+                          <li><a href="#" class="nav-link">DASTANGOI '24</a></li>
+                          <li><a href="#" class="nav-link">HAYAT '24</a></li>
+                          <li><a href="#" class="nav-link">SHEHNAI '24</a></li>
+                          <li><a href="#" class="nav-link">LA FUCHSIA '24</a></li>
+                          <li><a href="#" class="nav-link">CHIFFON '24</a></li>
+                      </ul>
+                  </div>
               </div>
-    
-              <!-- Mobile Search Collapse -->
-              <div class="collapse" id="mobileSearch">
-                <div class="container py-3">
-                  <form class="search-form">
-                    <input
-                      class="form-control"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                    <button type="submit">
-                      <i class="bi bi-search"></i>
-                    </button>
-                  </form>
-                </div>
+          </div>
+
+          <!-- For Men -->
+          <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#menCollapse">
+                      FOR MEN
+                  </button>
+              </h2>
+              <div id="menCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                  <div class="accordion-body ps-0">
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="nav-link">Formal Wear</a></li>
+                          <li><a href="#" class="nav-link">Casual Wear</a></li>
+                          <li><a href="#" class="nav-link">Accessories</a></li>
+                      </ul>
+                  </div>
               </div>
-            </nav>
-    
-            <!-- Mobile Menu Offcanvas -->
-            <div class="offcanvas offcanvas-start" id="mobileMenu">
-              <div class="offcanvas-header">
-                <img class="offcanvas-title" src="./Assets/Logo.png" height="50"/>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                ></button>
+          </div>
+
+          <!-- For Kids -->
+          <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#kidsCollapse">
+                      FOR KIDS
+                  </button>
+              </h2>
+              <div id="kidsCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                  <div class="accordion-body ps-0">
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="nav-link">Girls</a></li>
+                          <li><a href="#" class="nav-link">Boys</a></li>
+                          <li><a href="#" class="nav-link">Infants</a></li>
+                      </ul>
+                  </div>
               </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">FOR WOMEN</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">FOR MEN</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">FOR KIDS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">HOME APPLIANCES</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">SALE</a>
-                  </li>
-                </ul>
+          </div>
+
+          <!-- Home Appliances -->
+          <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#homeCollapse">
+                      HOME APPLIANCES
+                  </button>
+              </h2>
+              <div id="homeCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                  <div class="accordion-body ps-0">
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="nav-link">Kitchen</a></li>
+                          <li><a href="#" class="nav-link">Living Room</a></li>
+                          <li><a href="#" class="nav-link">Bedroom</a></li>
+                      </ul>
+                  </div>
               </div>
-            </div>
+          </div>
+
+          <!-- Sale -->
+          <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#saleCollapse">
+                      SALE
+                  </button>
+              </h2>
+              <div id="saleCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                  <div class="accordion-body ps-0">
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="nav-link">Women</a></li>
+                          <li><a href="#" class="nav-link">Men</a></li>
+                          <li><a href="#" class="nav-link">Kids</a></li>
+                          <li><a href="#" class="nav-link">Home</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
     </header>
     <!-- main-content-product-listing- page -->
     <div class="container-fluid">
@@ -492,7 +552,7 @@
 
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-lg-3 sidebar" id="filterSidebar">
+            <div class="col-lg-2 sidebar" id="filterSidebar">
                 <div class="d-flex justify-content-between align-items-center d-lg-none mb-3">
                     <h4 class="mb-0">Filters</h4>
                     <button class="btn-close" onclick="toggleFilters()"></button>
@@ -560,10 +620,45 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="filter-section">
+                  <div class="filter-title" onclick="toggleFilterContent(this)">
+                    Brand 
+                  </div>
+                  <div class="filter-content">
+                      <div class="filter-option">
+                          <input type="checkbox" id="chiffon" class="form-check-input">
+                          <label for="chiffon" class="form-check-label">MENSPE (12)</label>
+                      </div>
+                      </div>
+                  </div>
+
+                  <div class="filter-section">
+                    <div class="filter-title" onclick="toggleFilterContent(this)">
+                      Brand 
+                    </div>
+                    <div class="filter-content">
+                        <div class="filter-option">
+                            <input type="checkbox" id="chiffon" class="form-check-input">
+                            <label for="chiffon" class="form-check-label">MENSPE (12)</label>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                    <div class="filter-title" onclick="toggleFilterContent(this)">
+                      Shipped From 
+                    </div>
+                    <div class="filter-content">
+                        <div class="filter-option">
+                            <input type="checkbox" id="chiffon" class="form-check-input">
+                            <label for="chiffon" class="form-check-label">
+                              Sindh</label>
+                        </div>
+                        </div>
+                    </div> 
+              </div>
 
             <!-- Product Grid -->
-            <div class="col-lg-9 product-grid">
+            <div class="col-lg-10 product-grid">
                 <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4">
                     <!-- Product Cards -->
                     <div class="col">
@@ -817,6 +912,25 @@ crossorigin="anonymous"
                 section.classList.add('active');
             });
         }
+              // custom - loader
+      document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.getElementById("logo");
+
+  // Check if logo image loads correctly
+  logo.onload = () => {
+    console.log("Logo loaded successfully.");
+  };
+
+  logo.onerror = () => {
+    console.error("Failed to load logo. Please check the URL.");
+  };
+
+  // Simulate loading completion after 3 seconds (optional)
+  setTimeout(() => {
+    document.getElementById("loading-wrapper").style.display = "none";
+  }, 3000);
+});
+
     </script>
 </body>
 </html>

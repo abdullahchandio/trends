@@ -3,15 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up Form</title>
+    <title>Search Products</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -25,37 +19,72 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
     <style>
-      .content-box {
-        height: 100dvh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: url("./Assets/bglogin.png") no-repeat center center/cover;
-      }
-      .form-container {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
-        border-radius: 8px;
-        padding: 20px;
-        max-width: 450px;
-        width: 100%;
-      }
-      .form-header {
+      .search-container {
+        max-width: 800px;
+        margin: 50px auto;
         text-align: center;
       }
-      .form-header h1 {
-        font-size: 1.5rem;
+
+      .search-input {
+        max-width: 500px;
+        margin: 30px auto;
+        position: relative;
+      }
+
+      .breadcrumb {
+        margin: 20px 0;
+      }
+
+      .product-grid {
+        margin-top: 40px;
+      }
+
+      .product-card {
+        padding: 15px;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+      }
+
+      .product-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .original-price {
+        text-decoration: line-through;
+        color: #999;
+        margin-left: 10px;
+      }
+
+      .sale-price {
+        color: #dc3545;
         font-weight: bold;
+      }
+
+      .add-to-cart {
+        background-color: #dc3545;
+        border: none;
+        width: 100%;
+      }
+
+      .add-to-cart:hover {
+        background-color: #c82333;
       }
     </style>
   </head>
   <body>
+    <!-- loader -->
     <div id="loading-wrapper">
       <div id="logo-wrapper">
         <img id="logo" src="./Assets/Logo.png" alt="Logo" />
-        <div id="loading-text">LOADING</div>
       </div>
+      <!-- <div id="loading-text">LOADING</div> -->
       <div id="loading-content"></div>
     </div>
     <!-- header -->
@@ -372,112 +401,41 @@
         </div>
       </div>
     </header>
-    <!-- content -->
-     <div class="content-box">
-       <div class="container d-flex justify-content-center align-items-center">
-         <div class="form-container shadow">
-           <div class="form-header mb-4">
-             <h1 class="text-uppercase">CREATE ACCOUNT</h1>
-           </div>
-           <form>
-             <!-- First Name and Last Name -->
-             <div class="row mb-3">
-               <div class="col">
-                 <label for="firstName" class="form-label">First Name</label>
-                 <input
-                   type="text"
-                   id="firstName"
-                   class="form-control"
-                   placeholder="John"
-                   required
-                 />
-               </div>
-               <div class="col">
-                 <label for="lastName" class="form-label">Last Name</label>
-                 <input
-                   type="text"
-                   id="lastName"
-                   class="form-control"
-                   placeholder="Doe"
-                   required
-                 />
-               </div>
-             </div>
-   
-             <!-- Email -->
-             <div class="mb-3">
-               <label for="email" class="form-label">Email</label>
-               <input
-                 type="email"
-                 id="email"
-                 class="form-control"
-                 placeholder="john@example.com"
-                 required
-               />
-             </div>
-   
-             <!-- Password -->
-             <div class="mb-3">
-               <label for="password" class="form-label">Password</label>
-               <div class="input-group">
-                 <input
-                   type="password"
-                   id="password"
-                   class="form-control"
-                   required
-                 />
-                 <button
-                   class="btn btn-outline-secondary"
-                   type="button"
-                   onclick="togglePassword('password')"
-                 >
-                   Show
-                 </button>
-               </div>
-             </div>
-   
-             <!-- Confirm Password -->
-             <div class="mb-3">
-               <label for="confirmPassword" class="form-label"
-                 >Confirm Password</label
-               >
-               <div class="input-group">
-                 <input
-                   type="password"
-                   id="confirmPassword"
-                   class="form-control"
-                   required
-                 />
-                 <button
-                   class="btn btn-outline-secondary"
-                   type="button"
-                   onclick="togglePassword('confirmPassword')"
-                 >
-                   Show
-                 </button>
-               </div>
-             </div>
-   
-             <!-- Submit Button -->
-             <div class="d-grid mb-3">
-               <button type="submit" class="btn btn-dark">Create Account</button>
-             </div>
-   
-             <!-- Sign In Link -->
-             <div class="text-center">
-               <p class="small">
-                 Already have an account?
-                 <a href="./Login.html" class="text-danger text-decoration-underline"
-                   >Sign in</a
-                 >
-               </p>
-             </div>
-           </form>
-         </div>
-       </div>
-     </div>
-      <!-- Footer -->
-      <footer class="footer">
+    <!-- main-content -->
+    <div class="container">
+      <!-- Search Section -->
+      <div class="search-container">
+        <h1 class="mb-4">Search our store</h1>
+        <div class="search-input">
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control"
+            placeholder="Search..."
+          />
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="./product-listing.html">Products</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Search Results
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Products Grid -->
+      <div class="row product-grid" id="productsContainer">
+        <!-- Products will be dynamically inserted here -->
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
             <div class="container">
               <div class="row gy-4"> <!-- Changed to gy-4 for better vertical spacing -->
                 <!-- Shop Column -->
@@ -550,56 +508,100 @@
                 <p class="text-center mb-0">© 2024 Trends by Meezab. All Rights Reserved.</p>
               </div>
             </div>
-      </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+    </footer>
+    <!-- cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Custom JS -->
     <script>
-      function togglePassword(id) {
-        const input = document.getElementById(id);
-        if (input.type === "password") {
-          input.type = "text";
-        } else {
-          input.type = "password";
-        }
+      // Sample product data
+      const products = [
+        {
+          id: 1,
+          name: "Article 1",
+          image: "./Assets/Articleone.png",
+          price: 99.0,
+          originalPrice: 199.0,
+        },
+        {
+          id: 2,
+          name: "Article 2",
+          image: "./Assets/Articlestwo.png",
+          price: 149.0,
+          originalPrice: 249.0,
+        },
+        {
+          id: 3,
+          name: "Article 3",
+          image: "./Assets/Articlesthree.png",
+          price: 199.0,
+          originalPrice: 399.0,
+        },
+        {
+          id: 4,
+          name: "Article 4",
+          image: "./Assets/Articefour.png",
+          price: 299.0,
+          originalPrice: 499.0,
+        },
+      ];
+
+      // Function to render products
+      function renderProducts(productsToRender) {
+        const container = document.getElementById("productsContainer");
+        container.innerHTML = "";
+
+        productsToRender.forEach((product) => {
+          const productHTML = `
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-card">
+                            <img src="${product.image}" alt="${
+            product.name
+          }" class="product-image">
+                            <h5>${product.name}</h5>
+                            <div class="price-container">
+                                <span class="sale-price">RS ${product.price.toFixed(
+                                  2
+                                )}</span>
+                                <span class="original-price">RS ${product.originalPrice.toFixed(
+                                  2
+                                )}</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart mt-3">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+          container.innerHTML += productHTML;
+        });
       }
+
+      // Search functionality
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredProducts = products.filter((product) =>
+          product.name.toLowerCase().includes(searchTerm)
+        );
+        renderProducts(filteredProducts);
+      });
+
+      // Initial render
+      renderProducts(products);
+
       // custom - loader
       document.addEventListener("DOMContentLoaded", () => {
         const logo = document.getElementById("logo");
-
         // Check if logo image loads correctly
         logo.onload = () => {
           console.log("Logo loaded successfully.");
         };
-
         logo.onerror = () => {
           console.error("Failed to load logo. Please check the URL.");
         };
-
         // Simulate loading completion after 3 seconds (optional)
         setTimeout(() => {
           document.getElementById("loading-wrapper").style.display = "none";
         }, 3000);
       });
-
-      document
-        .getElementById("searchForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const query = document.getElementById("searchInput").value.trim();
-          if (query) {
-            window.location.href = `/search.html?query=${encodeURIComponent(
-              query
-            )}`;
-          } else {
-            alert("Please enter a search term.");
-          }
-        });
     </script>
   </body>
 </html>

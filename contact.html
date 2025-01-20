@@ -1,678 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Font Awesome for Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
-        
-
-        .contact-wrapper {
-            background: white;
-            border-radius: 10px;
-            /* box-shadow: 0 0 20px rgba(0,0,0,0.05); */
-            overflow: hidden;
-        }
-        .contact-form {
-            padding: 40px;
-        }
-
-        .section-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .address-block {
-            margin-bottom: 30px;
-        }
-
-        .address-block h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #444;
-        }
-
-        .address-block p {
-            color: #666;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #666;
-        }
-
-        .contact-item i {
-            margin-right: 10px;
-            color: #dc3545;
-            font-size: 18px;
-        }
-
-        /* .form-control {
-            border: 1px solid #ddd;
-            padding: 12px;
-            margin-bottom: 20px;
-        }
-
-        .form-control:focus {
-            box-shadow: none;
-            border-color: #dc3545;
-        } */
-
-        .submit-btn {
-            background: #000;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: #333;
-        }
-
-        .error-message {
-            color: #dc3545;
-            font-size: 12px;
-            margin-top: -15px;
-            margin-bottom: 15px;
-            display: none;
-        }
-
-        .success-message {
-            display: none;
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .working-hours {
-            background: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-
-        .working-hours h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #444;
-        }
-
-        .working-hours p {
-            margin-bottom: 5px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .contact-info, .contact-form {
-                padding: 20px;
-            }
-        }
+      .contact-form{
+        /* background-color: var( --Secondary-color); */
+      }
+      .contact-heading {
+        color: #c22b4c;
+      }
+      .contact-btn {
+        background-color: #c22b4c;
+        color: #fff;
+      }
+      .contact-btn:hover {
+        background-color: #a02441;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="loading-wrapper">
+      <div id="logo-wrapper">
+        <img id="logo" src="./Assets/Logo.png" alt="Logo" />
+        <div id="loading-text">LOADING</div>
+      </div>
+      <div id="loading-content"></div>
+    </div>
     <!-- header -->
     <header>
-            <div class="tagline">
-              <span>Get free shipping</span>
-            </div>
-            <div class="container">
-              <div class="net-bar py-2 px-3 d-none d-lg-flex">
-                <!-- Placeholder box on the left -->
-                <div class="placeholder-box"></div>
-    
-                <!-- Logo in the center -->
-                <div class="logo logocenter">
-                  <a class="navbar-brand" href="#">
-                    <img src="./Assets/Logo.png" alt="Logo" height="50" />
-                  </a>
-                </div>
-                <!-- Icons on the right -->
-                <div class="icons-section">
-                  <div class="icon-item">
-                    <a
-                      href="./Login.html"
-                      class="nav-link d-flex flex-column align-items-center"
-                    >
-                      <svg
-                        width="26"
-                        height="26"
-                        viewBox="0 0 26 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                        />
-                      </svg>
-    
-                      Login
-                    </a>
-                  </div>
-                  <div class="icon-item">
-                    <a
-                      href="#"
-                      class="nav-link d-flex flex-column align-items-center"
-                    >
-                      <svg
-                        width="26"
-                        height="26"
-                        viewBox="0 0 26 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.00488 15.24C9.97338 15.24 12.3799 12.8335 12.3799 9.86499C12.3799 6.89646 9.97338 4.48999 7.00488 4.48999C4.03635 4.48999 1.62988 6.89646 1.62988 9.86499C1.62988 12.8335 4.03635 15.24 7.00488 15.24Z"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M7.1924 21.8025C8.50408 21.8025 9.5674 20.7392 9.5674 19.4275C9.5674 18.1158 8.50408 17.0525 7.1924 17.0525C5.8807 17.0525 4.81738 18.1158 4.81738 19.4275C4.81738 20.7392 5.8807 21.8025 7.1924 21.8025Z"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M20.6299 21.8025C21.9416 21.8025 23.0049 20.7392 23.0049 19.4275C23.0049 18.1158 21.9416 17.0525 20.6299 17.0525C19.3182 17.0525 18.2549 18.1158 18.2549 19.4275C18.2549 20.7392 19.3182 21.8025 20.6299 21.8025Z"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M3.56738 9.86499L5.94238 12.24L10.3174 7.92749"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M13.1924 7.92749H20.0674L23.9424 11.4275V18.6775H22.8799"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M17.7549 8.23999V12.865H23.5049"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M18.2549 18.9275H9.50488"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M4.81738 18.9275H3.56738V16.0525"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-    
-                      My Order
-                    </a>
-                  </div>
-                  <div class="icon-item">
-                    <a
-                      href="#"
-                      id="cart-icon"
-                      class="d-flex align-items-center text-decoration-none text-dark flex-column"
-                    >
-                      <svg
-                        width="26"
-                        height="26"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                      >
-                        <path
-                          d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
-                          stroke="#C22B4C"
-                          stroke-width="0.9"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                      <span id="cart-total" class="ms-2">Rs.0</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="off">
-              <div class="marquee-container">
-                <div class="marquee">
-                  <span>Flat 40% off Avail now</span>
-                </div>
-              </div>
-            </div>        
-            <!-- main-navabr-start -->
-            <!-- Desktop Navigation -->
-            <nav class="navbar navbar-expand-lg d-none d-lg-block">
-              <div class="container">
-                <div class="placeholder-box"></div>
-    
-                <div class="collapse navbar-collapse">
-                  <ul class="navbar-nav align-items-center">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">FOR WOMEN</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">FOR MEN</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">FOR KIDS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">HOME APPLIANCES</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./product-listing.html">SALE</a>
-                    </li>
-                  </ul>
-                  <form class="search-form ms-auto">
-                    <input
-                      class="form-control search-bar"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                  </form>
-                </div>
-              </div>
-            </nav>
-    
-            <!-- Mobile Navigation -->
-            <nav class="navbar bg-white py-3 d-lg-none">
-              <div class="container">
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#mobileMenu"
+      <div class="tagline">
+        <span>Get free shipping</span>
+      </div>
+      <div class="container">
+        <div class="net-bar py-2 px-3 d-none d-lg-flex">
+          <!-- Placeholder box on the left -->
+          <div class="placeholder-box"></div>
+
+          <!-- Logo in the center -->
+          <div class="logo logocenter">
+            <a class="navbar-brand" href="#">
+              <img src="./Assets/Logo.png" alt="Logo" height="50" />
+            </a>
+          </div>
+          <!-- Icons on the right -->
+          <div class="icons-section">
+            <div class="icon-item">
+              <a
+                href="./Login.html"
+                class="nav-link d-flex flex-column align-items-center"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <i class="bi bi-list fs-4"></i>
-                </button>
-    
-                <a class="navbar-brand" href="#">
-                  <img src="./Assets/Logo.png" alt="Logo" />
-                </a>
-    
-                <div class="d-flex align-items-center">
-                  <!-- Login Icon -->
-                  <a
-                    href="./Login.html"
-                    class="nav-link d-flex flex-column align-items-center"
-                  >
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 26 26"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-miterlimit="10"
-                      />
-                    </svg>
-                  </a>
-                  <!-- Cart Icon -->
-                  <a
-                    href="#"
-                    id="cart-icon"
-                    class="d-flex align-items-center text-decoration-none text-dark flex-column "
-                    
-                  >
-                    <svg
-                      width="26"
-                      height="26"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                    >
-                      <path
-                        d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
-                        stroke="#C22B4C"
-                        stroke-width="0.9"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    <!-- <span id="cart-total" class="ms-2">Rs.0</span> -->
-                  </a>
-                </div>
-              </div>
-    
-              <!-- Mobile Search Collapse -->
-              <div class="collapse" id="mobileSearch">
-                <div class="container py-3">
-                  <form class="search-form">
-                    <input
-                      class="form-control"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                    <button type="submit">
-                      <i class="bi bi-search"></i>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </nav>
-    
-            <!-- Mobile Menu Offcanvas -->
-            <div class="offcanvas offcanvas-start" id="mobileMenu">
-              <div class="offcanvas-header">
-                <img class="offcanvas-title" src="./Assets/Logo.png" height="50"/>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                ></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">FOR WOMEN</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">FOR MEN</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">FOR KIDS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">HOME APPLIANCES</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./product-listing.html">SALE</a>
-                  </li>
-                </ul>
-              </div>
+                  <path
+                    d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+
+                Login
+              </a>
             </div>
-    </header>
-    <!-- main-contact-page -->
-    <div class="container py-5">
-        <div class="contact-wrapper">
-            <div class="row g-0">
-                <!-- Contact Information -->
-                <div class="col-lg-5">
-                    <div class="contact-info">
-                        <h2 class="section-title">GET IN TOUCH WITH US AT</h2>
+            <div class="icon-item">
+              <a
+                href="#"
+                class="nav-link d-flex flex-column align-items-center"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.00488 15.24C9.97338 15.24 12.3799 12.8335 12.3799 9.86499C12.3799 6.89646 9.97338 4.48999 7.00488 4.48999C4.03635 4.48999 1.62988 6.89646 1.62988 9.86499C1.62988 12.8335 4.03635 15.24 7.00488 15.24Z"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M7.1924 21.8025C8.50408 21.8025 9.5674 20.7392 9.5674 19.4275C9.5674 18.1158 8.50408 17.0525 7.1924 17.0525C5.8807 17.0525 4.81738 18.1158 4.81738 19.4275C4.81738 20.7392 5.8807 21.8025 7.1924 21.8025Z"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M20.6299 21.8025C21.9416 21.8025 23.0049 20.7392 23.0049 19.4275C23.0049 18.1158 21.9416 17.0525 20.6299 17.0525C19.3182 17.0525 18.2549 18.1158 18.2549 19.4275C18.2549 20.7392 19.3182 21.8025 20.6299 21.8025Z"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M3.56738 9.86499L5.94238 12.24L10.3174 7.92749"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M13.1924 7.92749H20.0674L23.9424 11.4275V18.6775H22.8799"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M17.7549 8.23999V12.865H23.5049"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M18.2549 18.9275H9.50488"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4.81738 18.9275H3.56738V16.0525"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                </svg>
 
-                        <div class="working-hours">
-                            <h3>Working Hours:</h3>
-                            <p>Monday - Saturday (11:00 AM - 10:00 PM)</p>
-                            <p>Sunday (02:00 PM-10:00 PM)</p>
-                        </div>
-
-                        <div class="address-block">
-                            <h3>Office Address:</h3>
-                            <p>Chak no.7 JB, Sargodha road, Faisalabad.</p>
-                        </div>
-
-                        <div class="address-block">
-                            <h3>Store Addresses:</h3>
-                            <div class="mb-3">
-                                <strong>Lahore:</strong>
-                                <p>Nine Arches 76-5-1, G FLOOR M. M. ALAM ROAD GLB, III LHR</p>
-                                <p>Dolmen Mall, Shop No. F-44, Level 1, Zone 5, DHA phase 6, Sector A, Lahore</p>
-                            </div>
-                            <div>
-                                <strong>Islamabad:</strong>
-                                <p>Shop no 7, Yaqoob Plaza F -10 Markaz Islamabad</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-details">
-                            <h3 class="mb-3">Contact Details:</h3>
-                            <div class="contact-item">
-                                <i class="bi bi-telephone"></i>
-                                <span>051-4718804, 0348-8880022</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-phone"></i>
-                                <span>+92 307-7777168, +92 302-8510587 (For call only)</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-whatsapp"></i>
-                                <span>+92 307-7777168, +92 302-8510587 (For WhatsApp Only)</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-envelope"></i>
-                                <span>sales@mushq.pk</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="col-lg-7">
-                    <div class="contact-form">
-                        <h2 class="section-title">Send us a message</h2>
-                        <div class="success-message" id="successMessage">
-                            Thank you for your message. We'll get back to you soon!
-                        </div>
-                        <form id="contactForm" novalidate>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control search-bar py-3" id="name" placeholder="Name" required>
-                                    <div class="error-message" id="nameError">Please enter your name</div>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control search-bar py-3" id="email" placeholder="Email" required>
-                                    <div class="error-message" id="emailError">Please enter a valid email address</div>
-                                </div>
-                            </div>
-                            <input type="tel" class="form-control search-bar py-3" id="phone" placeholder="Phone number" required>
-                            <div class="error-message" id="phoneError">Please enter a valid phone number</div>
-                            
-                            <textarea class="form-control search-bar py-3" id="message" rows="5" placeholder="Comment" required></textarea>
-                            <div class="error-message" id="messageError">Please enter your message</div>
-
-                            <button type="submit" class="submit-btn mt-3">Send Message</button>
-                        </form>
-                    </div>
-                </div>
+                My Order
+              </a>
             </div>
+            <div class="icon-item">
+              <a
+                href="#"
+                id="cart-icon"
+                class="d-flex align-items-center text-decoration-none text-dark flex-column"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                >
+                  <path
+                    d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
+                    stroke="#C22B4C"
+                    stroke-width="0.9"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span id="cart-total" class="ms-2">Rs.0</span>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="off">
+        <div class="marquee-container">
+          <div class="marquee">
+            <span>Flat 40% off Avail now</span>
+          </div>
+        </div>
+      </div>
+      <!-- main-navabr-start -->
+      <!-- Desktop Navigation -->
+      <nav class="navbar navbar-expand-lg d-none d-lg-block">
+        <div class="container">
+          <div class="placeholder-box"></div>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">FOR WOMEN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FOR MEN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FOR KIDS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">HOME APPLIANCES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./product-listing.html">SALE</a>
+              </li>
+            </ul>
+            <form class="search-form ms-auto">
+              <input
+                class="form-control search-bar"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <nav class="navbar bg-white py-3 d-lg-none">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+          >
+            <i class="bi bi-list fs-4"></i>
+          </button>
+
+          <a class="navbar-brand" href="#">
+            <img src="./Assets/Logo.png" alt="Logo" />
+          </a>
+
+          <div class="d-flex align-items-center">
+            <!-- Login Icon -->
+            <a
+              href="./Login.html"
+              class="nav-link d-flex flex-column align-items-center"
+            >
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
+                  stroke="#C22B4C"
+                  stroke-width="0.9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
+                  stroke="#C22B4C"
+                  stroke-width="0.9"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </a>
+            <!-- Cart Icon -->
+            <a
+              href="#"
+              id="cart-icon"
+              class="d-flex align-items-center text-decoration-none text-dark flex-column"
+            >
+              <svg
+                width="26"
+                height="26"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <path
+                  d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
+                  stroke="#C22B4C"
+                  stroke-width="0.9"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
+                  stroke="#C22B4C"
+                  stroke-width="0.9"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <!-- <span id="cart-total" class="ms-2">Rs.0</span> -->
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Search Collapse -->
+        <div class="collapse" id="mobileSearch">
+          <div class="container py-3">
+            <form class="search-form">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Offcanvas -->
+      <div class="offcanvas offcanvas-start" id="mobileMenu">
+        <div class="offcanvas-header">
+          <img class="offcanvas-title" src="./Assets/Logo.png" height="50" />
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">FOR WOMEN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FOR MEN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FOR KIDS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME APPLIANCES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./product-listing.html">SALE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+   <!-- main-contact-form -->
+    <div class="contact-form">
+       <!-- main-contact-page -->
+    <div class="container py-5">
+      <div class="row g-5">
+        <!-- Left Column: Contact Information -->
+        <div class="col-lg-6">
+          <h1 class="mb-3">Contact Us</h1>
+          <p class="text-muted mb-4">
+            Email, call, or complete the form to learn how we can help solve
+            your problem.
+          </p>
+          <p class="mb-2">
+            <i class="bi bi-envelope-fill contact-heading"></i>
+            <a
+              href="mailto:info@example.com"
+              class="text-decoration-none contact-heading"
+            >
+              info@example.com
+            </a>
+          </p>
+          <p class="mb-4">
+            <i class="bi bi-telephone-fill contact-heading"></i>
+            <a
+              href="tel:051-4718804"
+              class="text-decoration-none contact-heading"
+            >
+              051-4718804
+            </a>
+          </p>
+          <h3 class="fs-5">Working Hours</h3>
+          <p class="text-muted mb-4">Monday - Saturday: 11:00 AM - 10:00 PM</p>
+          <p class="text-muted mb-4">Sunday: 02:00 PM - 10:00 PM</p>
+          <h3 class="fs-5 mb-3">Store Locations</h3>
+          <h4 class="fs-6 contact-heading">Lahore</h4>
+          <p class="text-muted mb-2">
+            Nine Arches 76-5-1, G FLOOR M. M. ALAM ROAD GLB, III LHR<br />
+            Dolmen Mall, Shop No. F-44, Level 1, Zone 5, DHA phase 6, Sector A
+          </p>
+          <h4 class="fs-6 contact-heading">Islamabad</h4>
+          <p class="text-muted mb-2">Shop no 7, Yaqoob Plaza F-10 Markaz</p>
+          <h4 class="fs-6 contact-heading">Faisalabad</h4>
+          <p class="text-muted mb-2">Chak no.7 JB, Sargodha road</p>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h2 class="mb-3">Get in Touch</h2>
+              <p class="text-muted mb-4">You can reach us anytime</p>
+              <form>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      placeholder="Enter first name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      placeholder="Enter last name"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label"
+                    >How can we help?</label
+                  >
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Type your message here"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn contact-btn w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <!-- Footer -->
     <footer class="footer">
-            <div class="container">
-              <div class="row gy-4"> <!-- Changed to gy-4 for better vertical spacing -->
-                <!-- Shop Column -->
-                <div class="col-lg-3 col-sm-6">
-                  <h5 class="text-uppercase mb-4">Shop</h5>
-                  <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><a href="#">Women</a></li>
-                    <li class="mb-2"><a href="#">Men</a></li>
-                    <li class="mb-2"><a href="#">Kids</a></li>
-                    <li class="mb-2"><a href="#">Home Trends</a></li>
-                  </ul>
-                </div>
-    
-                            <!-- Need Help Column -->
-                <div class="col-lg-3 col-sm-6">
-                  <h5 class="text-uppercase mb-4 font-weight-bold">Need Help?</h5>
-                  <ul class="list-unstyled mb-4">
-                    <li class="mb-2 d-flex align-items-center">
-                      <img src="./Assets/SVG/phone-icon.svg" alt="Phone Icon" class="me-2">
-                      <a href="tel:02323233232" class="font-weight-bold">02323233232</a>
-                    </li>
-                    <li class="mb-2 d-flex align-items-center">
-                      <img src="./Assets/SVG/phone-icon-alt.svg" alt="Alt Phone Icon" class="me-2">
-                      <a href="tel:0322033443" class="font-weight-bold">0322033443</a>
-                    </li>
-                    <li class="mb-2 d-flex align-items-center">
-                      <img src="./Assets/SVG/email-icon.svg" alt="Email Icon" class="me-2">
-                      <a href="mailto:info@trends.com" class="font-weight-bold">info@trends.com</a>
-                    </li>
-                  </ul>
-                  <div class="account-options">
-                    <a href="#" class="d-block">My Account</a>
-                    <a href="./Login.html" class="d-block">Sign In</a>
-                  </div>
-                </div>
-                <!-- Customer Care Column -->
-                <div class="col-lg-3 col-sm-6">
-                  <h5 class="text-uppercase mb-4">Customer Care</h5>
-                  <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><a href="./contact.html">Contact Us</a></li>
-                    <li class="mb-2"><a href="#">Delivery & Orders</a></li>
-                    <li class="mb-2"><a href="#">Terms and Conditions</a></li>
-                    <li class="mb-2"><a href="#">Payment Guide</a></li>
-                    <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                    <li class="mb-2"><a href="#">Track My Order</a></li>
-                    <li class="mb-2"><a href="#">Returns & Exchange</a></li>
-                  </ul>
-                </div>
-    
-                <!-- Social & Payment Column -->
-                <div class="col-lg-3 col-sm-6">
-                  <h5 class="text-uppercase mb-4">Follow Us</h5>
-                  <div class="social-icons mb-4">
-                    <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                  <h5 class="text-uppercase mb-4">We Accept</h5>
-                  <div class="payment-methods d-flex align-items-center">
-                    <img src="./Assets/footersvg/Item → cash-on-delivery.png.svg" alt="cash-on-delivery" class="me-3">
-                    <img src="./Assets/footersvg/Item → visa.png.svg" alt="Visa" class="me-3">
-                    <img src="./Assets/footersvg/Item → mastercard.png.svg" alt="Mastercard" class="me-3">
-                  </div>
-                </div>
-              </div>
-    
-              <!-- Copyright -->
-              <div class="copyright mt-5">
-                <p class="text-center mb-0">© 2024 Trends by Meezab. All Rights Reserved.</p>
-              </div>
-            </div>
-    </footer>
-    
-    
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Reset error messages
-            document.querySelectorAll('.error-message').forEach(error => {
-                error.style.display = 'none';
-            });
-            
-            let isValid = true;
-            
-            // Name validation
-            const name = document.getElementById('name');
-            if (!name.value.trim()) {
-                document.getElementById('nameError').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Email validation
-            const email = document.getElementById('email');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value)) {
-                document.getElementById('emailError').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Phone validation
-            const phone = document.getElementById('phone');
-            const phoneRegex = /^\+?\d{10,}$/;
-            if (!phoneRegex.test(phone.value.replace(/\s+/g, ''))) {
-                document.getElementById('phoneError').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Message validation
-            const message = document.getElementById('message');
-            if (!message.value.trim()) {
-                document.getElementById('messageError').style.display = 'block';
-                isValid = false;
-            }
-            
-            if (isValid) {
-                // Show success message
-                document.getElementById('successMessage').style.display = 'block';
-                
-                // Reset form
-                this.reset();
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    document.getElementById('successMessage').style.display = 'none';
-                }, 5000);
-            }
-        });
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Changed to gy-4 for better vertical spacing -->
+          <!-- Shop Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Shop</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#">Women</a></li>
+              <li class="mb-2"><a href="#">Men</a></li>
+              <li class="mb-2"><a href="#">Kids</a></li>
+              <li class="mb-2"><a href="#">Home Trends</a></li>
+            </ul>
+          </div>
 
-        // Real-time validation
-        const inputs = document.querySelectorAll('.form-control');
-        inputs.forEach(input => {
-            input.addEventListener('input', function() {
-                const errorElement = document.getElementById(`${this.id}Error`);
-                if (errorElement) {
-                    errorElement.style.display = 'none';
-                }
-            });
-        });
+          <!-- Need Help Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Need Help?</h5>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="./Assets/SVG/phone-icon.svg"
+                  alt="Phone Icon"
+                  class="me-2"
+                />
+                <a href="tel:02323233232" class="font-weight-bold"
+                  >02323233232</a
+                >
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="./Assets/SVG/phone-icon-alt.svg"
+                  alt="Alt Phone Icon"
+                  class="me-2"
+                />
+                <a href="tel:0322033443" class="font-weight-bold">0322033443</a>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img
+                  src="./Assets/SVG/email-icon.svg"
+                  alt="Email Icon"
+                  class="me-2"
+                />
+                <a href="mailto:info@trends.com" class="font-weight-bold"
+                  >info@trends.com</a
+                >
+              </li>
+            </ul>
+            <div class="account-options">
+              <a href="#" class="d-block">My Account</a>
+              <a href="./Login.html" class="d-block">Sign In</a>
+            </div>
+          </div>
+          <!-- Customer Care Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Customer Care</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="./contact.html">Contact Us</a></li>
+              <li class="mb-2"><a href="#">Delivery & Orders</a></li>
+              <li class="mb-2"><a href="#">Terms and Conditions</a></li>
+              <li class="mb-2"><a href="#">Payment Guide</a></li>
+              <li class="mb-2"><a href="#">Privacy Policy</a></li>
+              <li class="mb-2"><a href="#">Track My Order</a></li>
+              <li class="mb-2"><a href="#">Returns & Exchange</a></li>
+            </ul>
+          </div>
+
+          <!-- Social & Payment Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Follow Us</h5>
+            <div class="social-icons mb-4">
+              <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <h5 class="text-uppercase mb-4">We Accept</h5>
+            <div class="payment-methods d-flex align-items-center">
+              <img
+                src="./Assets/footersvg/Item → cash-on-delivery.png.svg"
+                alt="cash-on-delivery"
+                class="me-3"
+              />
+              <img
+                src="./Assets/footersvg/Item → visa.png.svg"
+                alt="Visa"
+                class="me-3"
+              />
+              <img
+                src="./Assets/footersvg/Item → mastercard.png.svg"
+                alt="Mastercard"
+                class="me-3"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright mt-5">
+          <p class="text-center mb-0">
+            © 2024 Trends by Meezab. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+
+      // custom - loader
+      document.addEventListener("DOMContentLoaded", () => {
+        const logo = document.getElementById("logo");
+
+        // Check if logo image loads correctly
+        logo.onload = () => {
+          console.log("Logo loaded successfully.");
+        };
+        logo.onerror = () => {
+          console.error("Failed to load logo. Please check the URL.");
+        };
+        // Simulate loading completion after 3 seconds (optional)
+        setTimeout(() => {
+          document.getElementById("loading-wrapper").style.display = "none";
+        }, 3000);
+      });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
-
