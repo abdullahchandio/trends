@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trends</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="root">
+        <!-- website-loader -->
+        <div id="loading-wrapper">
+          <div id="logo-wrapper">
+            <img id="logo" src="./Assets/Logo.png" alt="Logo" />
+            <div id="loading-text">LOADING</div>
+          </div>
+          <div id="loading-content"></div>
+        </div>
+      <!-- website-header -->
+      <header>
+            <div class="tagline">
+              <span>Get free shipping</span>
+            </div>
+            <div class="container">
+              <div class="net-bar py-2 px-3 d-none d-lg-flex">
+                <!-- Placeholder box on the left -->
+                <div class="placeholder-box"></div>
+    
+                <!-- Logo in the center -->
+                <div class="logo logocenter">
+                  <a class="navbar-brand" href="./index.html">
+                    <img src="./Assets/Logo.png" alt="Logo" height="50" />
+                  </a>
+                </div>
+                <!-- Icons on the right -->
+                <div class="icons-section">
+                  <div class="icon-item">
+                    <a
+                      href="./Login.html"
+                      class="nav-link d-flex flex-column align-items-center"
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+    
+                      Login
+                    </a>
+                  </div>
+                  <div class="icon-item">
+                    <a
+                      href="#"
+                      class="nav-link d-flex flex-column align-items-center"
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.00488 15.24C9.97338 15.24 12.3799 12.8335 12.3799 9.86499C12.3799 6.89646 9.97338 4.48999 7.00488 4.48999C4.03635 4.48999 1.62988 6.89646 1.62988 9.86499C1.62988 12.8335 4.03635 15.24 7.00488 15.24Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M7.1924 21.8025C8.50408 21.8025 9.5674 20.7392 9.5674 19.4275C9.5674 18.1158 8.50408 17.0525 7.1924 17.0525C5.8807 17.0525 4.81738 18.1158 4.81738 19.4275C4.81738 20.7392 5.8807 21.8025 7.1924 21.8025Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M20.6299 21.8025C21.9416 21.8025 23.0049 20.7392 23.0049 19.4275C23.0049 18.1158 21.9416 17.0525 20.6299 17.0525C19.3182 17.0525 18.2549 18.1158 18.2549 19.4275C18.2549 20.7392 19.3182 21.8025 20.6299 21.8025Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M3.56738 9.86499L5.94238 12.24L10.3174 7.92749"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M13.1924 7.92749H20.0674L23.9424 11.4275V18.6775H22.8799"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M17.7549 8.23999V12.865H23.5049"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M18.2549 18.9275H9.50488"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M4.81738 18.9275H3.56738V16.0525"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+    
+                      My Order
+                    </a>
+                  </div>
+                  <div class="icon-item">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center text-decoration-none text-dark flex-column "
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span id="cart-total" class="ms-2">Rs.0</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="off">
+              <div class="marquee-container">
+                <div class="marquee">
+                  <span>Flat 40% off Avail now</span>
+                </div>
+              </div>
+            </div>        
+            <!-- main-navabr-start -->
+            <!-- Desktop Navigation -->
+            <nav class="navbar navbar-expand-lg d-none d-lg-block">
+              <div class="container">
+                <div class="placeholder-box"></div>
+            
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          All PRODUCTS
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Items 1</a></li>
+                          <li><a class="dropdown-item" href="#">Items 1</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        FOR WOMEN
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Items 1</a></li>
+                        <li><a class="dropdown-item" href="#">Items 1</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">FOR MEN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">FOR KIDS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">HOME APPLIANCES</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                      <a class="nav-link" href="./product-listing.html">BRANDS</a>
+                    </li>
+                  </ul>
+                  <form class="search-form ms-auto" id="searchForm">
+                    <input
+                      class="form-control search-bar"
+                      type="search"
+                      id="searchInput"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </form>
+                </div>
+              </div>
+            </nav>
+    
+            <!-- Mobile Navigation -->
+            <nav class="navbar bg-white border-bottom py-2 d-lg-none"">
+              <div class="container-fluid px-3">
+                  <!-- Menu Trigger -->
+                  <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                      <i class="bi bi-list fs-4"></i>
+                  </button>
+    
+                  <!-- Logo -->
+                  <a class="navbar-brand m-0" href="/">
+                      <img src="./Assets/Logo.png" alt="Logo" height="32">
+                  </a>
+    
+                  <!-- Icons -->
+                  <div class="d-flex align-items-center">
+                    <!-- Login Icon -->
+                    <a
+                      href="./Login.html"
+                      class="nav-link d-flex flex-column align-items-center"
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a
+                      href="#"
+                      id="cart-icon"
+                      class="d-flex align-items-center text-decoration-none text-dark flex-column "
+                      
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <!-- <span id="cart-total" class="ms-2">Rs.0</span> -->
+                    </a>
+                  </div>
+              </div>
+            </nav>
+            <!-- Mobile Menu Offcanvas -->
+            <div class="offcanvas offcanvas-start d-lg-none" id="mobileMenu">
+              <div class="offcanvas-header border-bottom px-4 py-3">
+                  <a href="./index.html" class="offcanvas-title">
+                      <img src="./Assets/Logo.png" alt="Logo" height="32">
+                  </a>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+              </div>
+    
+              <div class="offcanvas-body p-0">
+                  <!-- Search Bar -->
+                  <div class="px-4 py-3 border-bottom">
+                      <div class="position-relative">
+                          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                          <input type="search" class="form-control ps-5 search-bar" placeholder="Search products">
+                      </div>
+                  </div>
+    
+                  <!-- Navigation Links -->
+                  <div class="py-2">
+                    <!-- Pages Dropdown - 1 -->
+                    <div class="nav-item">
+                        <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#pagesSubmenu">
+                                ALL PRODUCTS
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                        <div class="collapse" id="pagesSubmenu">
+                            <div class="py-2">
+                                <a href="#" class="nav-link px-4 py-2">Items 1</a>
+                                <a href="#" class="nav-link px-4 py-2">Items 2</a>
+                            </div>
+                        </div>
+                    </div>
+                      <a href="./women.html" class="nav-link px-4 py-2">FOR WOMEN</a>
+                      <a href="./men.html" class="nav-link px-4 py-2">FOR MEN</a>
+                      <a href="./kids.html" class="nav-link px-4 py-2">FOR KIDS</a>
+                      <a href="./home-appliance.html" class="nav-link px-4 py-2">HOME APPLIANCES</a>
+                      
+                      <a href="#" class="nav-link px-4 py-2">SALE</a>
+                      <div class="nav-item">
+                        <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#pagesSub">
+                                BRAND
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                        <div class="collapse" id="pagesSub">
+                            <div class="py-2">
+                                <a href="#" class="nav-link px-4 py-2">BRAND 1</a>
+                                <a href="#" class="nav-link px-4 py-2">BRAND 2</a>
+                            </div>
+                        </div>
+                    </div>
+                      <a href="./about.html" class="nav-link px-4 py-2">ABOUT</a>
+                      <a href="./contact.html" class="nav-link px-4 py-2">CONTACT</a>
+                  </div>
+    
+                  <div class="border-top">
+                      <!-- Social Links -->
+                      <div class=" mt-5 text-right">
+                          <a href="#" class="btn btn-link text-dark px-2">
+                              <i class="bi bi-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-link text-dark px-2">
+                              <i class="bi bi-twitter"></i>
+                          </a>
+                          <a href="#" class="btn btn-link text-dark px-2">
+                              <i class="bi bi-instagram"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+      </header>
+
+      <!--main-silder  -->
+      <section class="slider_section">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./Assets/cbanner.png"
+                  class="d-block w-100"
+                  alt="Placeholder 1"
+
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./Assets/cbanner.png"
+                  class="d-block w-100"
+                  alt="Placeholder 1"
+
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./Assets/cbanner.png"
+                  class="d-block w-100"
+                  alt="Placeholder 1"
+
+                />             
+              </div>
+            </div>
+            <div class="review-button">
+              <span>Our Reviews ⭐</span>
+            </div>
+          </div>
+      </section>
+      
+      <!--CategoryCard  -->
+      <div class="container py-3">
+          <!-- Desktop Grid -->
+          <div class="desktop-grid">
+            <a href="/women" class="category-card">
+              <img src="./Assets/WOMEN.png" alt="Women's Fashion" loading="lazy" />
+              <div class="category-overlay">
+                <span class="category-title">WOMEN</span>
+              </div>
+            </a>
+            <a href="/men" class="category-card">
+              <img src="./Assets/MEN.png" alt="Men's Fashion" loading="lazy" />
+              <div class="category-overlay">
+                <span class="category-title">MEN</span>
+              </div>
+            </a>
+            <a href="/kids" class="category-card">
+              <img src="./Assets/KIDS.png" alt="Kids Fashion" loading="lazy"/>
+              <div class="category-overlay">
+                <span class="category-title">KIDS</span>
+              </div>
+            </a>
+            <a href="/home-trends" class="category-card">
+              <img src="./Assets/HOMETRENDS.png" alt="Home Trends"  loading="lazy"/>
+              <div class="category-overlay">
+                <span class="category-title">HOME TRENDS</span>
+              </div>
+            </a>
+            <a href="/accessories" class="category-card">
+              <img src="./Assets/ACCESSORIES.png" alt="Accessories" loading="lazy"/>
+              <div class="category-overlay">
+                <span class="category-title">ACCESSORIES</span>
+              </div>
+            </a>
+            <a href="/sale" class="category-card">
+              <img src="./Assets/SALE.png" alt="Sale" loading="lazy" />
+              <div class="category-overlay">
+                <span class="category-title">SALE</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Mobile Slider -->
+          <div class="mobile-slider">
+            <div class="swiper category-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="/women" class="category-card">
+                    <img src="./Assets/WOMEN.png" alt="Women's Fashion" loading="lazy"/>
+                    <div class="category-overlay">
+                      <span class="category-title">WOMEN</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/men" class="category-card">
+                    <img src="./Assets/MEN.png" alt="Men's Fashion" loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">MEN</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/kids" class="category-card">
+                    <img src="./Assets/KIDS.png" alt="Kids Fashion" loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">KIDS</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/home-trends" class="category-card">
+                    <img src="./Assets/HOMETRENDS.png" alt="Home Trends" loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">HOME TRENDS</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/accessories" class="category-card">
+                    <img src="./Assets/ACCESSORIES.png" alt="Accessories"  loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">ACCESSORIES</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/sale" class="category-card">
+                    <img src="./Assets/SALE.png" alt="Sale" loading="lazy"/>
+                    <div class="category-overlay">
+                      <span class="category-title">SALE</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+      </div>
+
+      <!-- Product-Section -->
+      <section class="container py-3 productSection">
+        <div class="product-container">
+          <!-- Product Card 1 -->
+          <div class="product-card">
+            <img
+              src="./Assets/Articleone.png"
+              alt="Product Image"
+              class="product-image"
+              loading="lazy"
+            />
+            <article class="product-info">
+              <h2 class="product-title">Article 1</h2>
+              <p class="product-price">
+                <span class="sale-price" data-price="99">Rs 99.00</span>
+                <span class="original-price">Rs 199.00</span>
+              </p>
+              <button
+                class="view-more-add add-to-cart"
+                id="cart-toggle"
+              >
+                Add to Cart <i class="bi bi-cart"></i>
+              </button>
+            </article>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="product-card">
+            <img
+              src="./Assets/Articlestwo.png"
+              alt="Product Image"
+              class="product-image"
+              loading="lazy"
+            />
+            <article class="product-info">
+              <h2 class="product-title">Article 2</h2>
+              <p class="product-price">
+                <span class="sale-price" data-price="144">RS 149.00</span>
+                <span class="original-price">RS 249.00</span>
+              </p>
+              <button
+              class="view-more-add add-to-cart"
+              id="cart-toggle"
+            >
+              Add to Cart <i class="bi bi-cart"></i>
+            </button>
+            </article>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card">
+            <img
+              src="./Assets/Articlesthree.png"
+              alt="Product Image"
+              class="product-image"
+              loading="lazy"
+            />
+            <article class="product-info">
+              <h2 class="product-title">Article 3</h2>
+              <p class="product-price">
+                <span class="sale-price">RS 199.00</span>
+                <span class="original-price">RS 399.00</span>
+              </p>
+              <button
+              class="view-more-add add-to-cart"
+              id="cart-toggle"
+            >
+              Add to Cart <i class="bi bi-cart"></i>
+            </button>
+            </article>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="product-card">
+            <img
+              src="./Assets/Articefour.png"
+              alt="Product Image"
+              class="product-image"
+              loading="lazy"
+            />
+            <article class="product-info">
+              <h2 class="product-title">Article 4</h2>
+              <p class="product-price">
+                <span class="sale-price">RS 299.00</span>
+                <span class="original-price">RS 499.00</span>
+              </p>
+              <button
+                class="view-more-add add-to-cart"
+                id="cart-toggle"
+              >
+                Add to Cart <i class="bi bi-cart"></i>
+              </button>
+            </article>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <button class="view-more-btn text-center">View More</button>
+        </div>
+      </section>
+      
+      <!-- Cart Sidebar -->
+      <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">SHOPPING BAG (<span id="cart-count">3</span>)</h5>
+            <button class="btn-close" id="close-sidebar" aria-label="Close"></button>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="cart-footer">
+            <hr>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="mb-0">SUBTOTAL:</h6>
+                <span class="fw-bold" id="subtotal">$0.00</span>
+            </div>
+            <a href="shop_cart.html" class="btn btn-outline-dark w-100 mb-2">View Cart</a>
+            <a href=" Checkout.html" class="btn btn-dark w-100">Checkout</a>
+        </div>
+      </div>
+
+      <!-- Banner Section -->
+      <section class="banner-section py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Banner 1 -->
+            <div class="col-md-6 mb-3">
+              <div class="position-relative">
+                <img
+                  src="./Assets/bannerone.jpg"
+                  alt="Bridal Collection"
+                  class="img-fluid"
+                  loading="lazy"
+                  />
+              </div>
+            </div>
+
+            <!-- Banner 2 -->
+            <div class="col-md-6">
+              <div class="position-relative">
+                <img
+                  src="./Assets/bannertwo.jpg"
+                  alt="Ready to Wear"
+                  class="img-fluid"
+                  loading="lazy"
+                  />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Productcard -->
+      <section class="container py-3 productSection">
+              <div class="product-container">
+                <!-- Product Card 1 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articleone.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 1</h2>
+                    <p class="product-price">
+                      <span class="sale-price" data-price="99">Rs 99.00</span>
+                      <span class="original-price">Rs 199.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 1"
+                      data-price="99"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+            
+                <!-- Product Card 2 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articlestwo.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 2</h2>
+                    <p class="product-price">
+                      <span class="sale-price">RS 149.00</span>
+                      <span class="original-price">RS 249.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 2"
+                      data-price="149"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+            
+                <!-- Product Card 3 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articlesthree.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 3</h2>
+                    <p class="product-price">
+                      <span class="sale-price">RS 199.00</span>
+                      <span class="original-price">RS 399.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 3"
+                      data-price="199"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+            
+                <!-- Product Card 4 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articefour.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 4</h2>
+                    <p class="product-price">
+                      <span class="sale-price">RS 299.00</span>
+                      <span class="original-price">RS 499.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 4"
+                      data-price="299"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+              </div>
+              <div class="d-flex justify-content-center align-items-center">
+                <button class="view-more-btn text-center">View More</button>
+              </div>
+      </section>
+      
+      <!-- Testimonials Section -->
+      <section class="testimonial-section">
+        <div class="container">
+          <h2 class="text-center mb-5">We Value Your Support.</h2>
+          <div class="testimonial-container">
+            <button class="nav-button prev-button">←</button>
+            <button class="nav-button next-button">→</button>
+            <div class="testimonial-track">
+              <!-- Card 1 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Jan 7, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Maha Touqeer
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Feb 14, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Sarah Ahmed
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Mar 21, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Aisha Khan
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="testimonial-card">
+                <div class="card border-0">
+                  <div class="d-flex gap-3 testimonial_media">
+                    <img
+                      src="./Assets/testimonial.png"
+                      class="testimonial-image"
+                      alt="Customer"
+                    />
+                    <div class="flex-grow-1">
+                      <div class="star-rating mb-2">★★★★★</div>
+                      <p class="text-muted small">Apr 3, 2023</p>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc volutpat libero et velit interdum.
+                      </p>
+                      <p class="fw-bold mb-0">
+                        Zara Hassan
+                        <svg
+                          class="text-success ms-1"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                          />
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- NewsLetter-Section -->
+      <section class="email-signup">
+        <div class="container">
+          <div class="row align-items-end">
+            <div class="col-md-3 mb-3">
+              <img
+                src="./Assets/Logo.png"
+                alt="Trends Logo"
+                class="trends-logo"
+              />
+            </div>
+            <div class="col-md-6">
+              <h4 class="mb-3">Signup for Email Updates</h4>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your email address"
+              />
+            </div>
+            <div class="col-md-3">
+              <button class="join-btn mt-3 mt-md-0">JOIN</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Features Section -->
+      <section class="container py-3 features-section">
+        <div class="features-container">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <svg width="91" height="90" viewBox="0 0 91 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="90" height="90" transform="translate(0.5)" fill="url(#pattern0_9_418)"/>
+              <defs>
+              <pattern id="pattern0_9_418" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_9_418" transform="scale(0.00862069)"/>
+              </pattern>
+              <image id="image0_9_418" width="116" height="116" xlink:href="data:image/png;base64,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"/>
+              </defs>
+              </svg>
+            <article class="feature-info">
+              <h3 class="feature-title">Shipping Nationwide</h3>
+              <p class="feature-subtitle">Fast & Reliable Delivery</p>
+            </article>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <svg width="91" height="90" viewBox="0 0 91 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="90" height="90" transform="translate(0.5)" fill="url(#pattern0_9_422)"/>
+              <rect x="10" y="52" width="54" height="15" fill="white"/>
+              <path d="M13.0481 57.8022H10V59.9444H13.0481V66.2932H15.4659V59.9444H18.5005V57.8022H15.4659H13.0481Z" fill="black"/>
+              <path d="M26.2112 63.3599C26.0196 63.1449 25.6992 62.9822 25.2531 62.8717V62.7448C25.7214 62.7025 26.1765 62.567 26.5915 62.3463C26.9151 62.1657 27.1762 61.8914 27.34 61.5596C27.507 61.1961 27.5884 60.7993 27.578 60.3997C27.5947 59.9001 27.4578 59.4074 27.1858 58.9875C26.8981 58.5816 26.4919 58.2741 26.0226 58.1068C25.408 57.8892 24.7581 57.7879 24.1063 57.8082H19.0806V66.2992H21.4984V63.4047H22.4879C22.7393 63.3976 22.9906 63.4207 23.2365 63.4733C23.4029 63.5127 23.5545 63.5987 23.6736 63.7211C23.8044 63.8694 23.9128 64.0358 23.9955 64.2152L25.024 66.2932H27.8161L26.7486 64.1645C26.6052 63.8742 26.4246 63.6037 26.2112 63.3599ZM24.8294 61.4775C24.6827 61.577 24.4332 61.6268 24.0808 61.6268H21.4984V59.9444H24.0838C24.4342 59.9444 24.6837 59.9991 24.8324 60.1086C24.9821 60.2191 25.051 60.443 25.051 60.7803C25.048 61.1386 24.9716 61.376 24.8294 61.4775Z" fill="black"/>
+              <path d="M28.8559 57.8022H28.2002V66.2932H28.8559H30.618H35.8518V64.1526H30.618V63.0867H35.6587V60.958H30.618V59.9444H35.8518V57.8022H30.618H28.8559Z" fill="black"/>
+              <path d="M42.8095 61.0849L42.9263 62.9345H42.7586L41.498 60.9834L39.1057 57.8022H36.5337V66.2932H38.9515V62.9733L38.8497 61.3506H39.0159L40.1087 63.024L42.6553 66.2932H45.2273V57.8022H42.8095V61.0849Z" fill="black"/>
+              <path d="M52.9693 58.3026C52.1942 57.9526 51.3498 57.7816 50.4991 57.8025H46.1411V66.2935H50.5006C51.3514 66.3151 52.1959 66.1441 52.9708 65.7934C53.6406 65.4815 54.2009 64.9759 54.5787 64.3424C54.9504 63.6344 55.1446 62.8471 55.1446 62.048C55.1446 61.2488 54.9504 60.4616 54.5787 59.7536C54.2005 59.1198 53.6397 58.6142 52.9693 58.3026ZM52.3705 63.4482C52.3163 63.5879 52.2299 63.713 52.1183 63.8133C52.0068 63.9137 51.8732 63.9865 51.7282 64.0259C51.3277 64.1206 50.9166 64.1627 50.5051 64.1513H48.5589V59.9446H50.5051C50.9167 59.9328 51.328 59.9755 51.7282 60.0715C51.8725 60.11 52.0057 60.1816 52.1173 60.2806C52.2288 60.3797 52.3155 60.5033 52.3705 60.6418C52.4992 60.9403 52.5636 61.4091 52.5636 62.048C52.5591 62.6824 52.4948 63.1482 52.3705 63.4482Z" fill="black"/>
+              <path d="M63.7746 62.6181C63.5951 62.253 63.3139 61.9472 62.9646 61.7374C62.5784 61.4886 62.0339 61.3134 61.3313 61.2119L58.6366 60.8178C58.5116 60.8011 58.3887 60.7716 58.2698 60.7297C58.1899 60.7039 58.1216 60.6511 58.0766 60.5804C58.0366 60.5138 58.0164 60.4372 58.0183 60.3595C58.0165 60.3039 58.0266 60.2486 58.0477 60.1972C58.0689 60.1457 58.1007 60.0993 58.141 60.061C58.272 59.9639 58.4275 59.905 58.5901 59.8908C58.9009 59.8453 59.2148 59.8259 59.5288 59.8326C59.9355 59.8232 60.3422 59.8487 60.7444 59.9087C60.9491 59.9265 61.1407 60.0165 61.2849 60.1625C61.3817 60.3041 61.429 60.4735 61.4196 60.6446V60.8342H63.8374V60.7581C63.8507 60.1789 63.6946 59.6083 63.3883 59.116C63.0626 58.6321 62.5953 58.2599 62.0499 58.0502C61.4511 57.8004 60.6945 57.676 59.7803 57.677C59.1164 57.6623 58.4539 57.7433 57.8132 57.9173C57.3468 58.0453 56.91 58.2629 56.5272 58.5577C56.2232 58.796 55.9804 59.103 55.819 59.4534C55.6767 59.7678 55.6022 60.1086 55.6005 60.4536C55.5896 60.8679 55.6828 61.2784 55.8714 61.6478C56.0569 61.9924 56.3381 62.2764 56.6814 62.4658C57.0956 62.6913 57.5495 62.8353 58.0183 62.8898L60.713 63.2451C60.956 63.2577 61.1941 63.3181 61.4136 63.4227C61.4704 63.4592 61.5165 63.5101 61.547 63.5702C61.5775 63.6302 61.5914 63.6973 61.5873 63.7646C61.5939 63.8725 61.5597 63.979 61.4915 64.0631C61.3616 64.1594 61.2042 64.2117 61.0424 64.2124C60.6832 64.2475 60.3223 64.2619 59.9615 64.2557C59.5613 64.264 59.161 64.2431 58.7638 64.193C58.5063 64.1512 58.3371 64.0766 58.2563 63.9706C58.1672 63.8427 58.124 63.6886 58.1335 63.5332V63.2675H55.7232V63.3436C55.7232 64.0621 55.8949 64.6473 56.2382 65.0991C56.6134 65.5737 57.1246 65.9231 57.7039 66.1008C58.4358 66.3302 59.2004 66.4391 59.9675 66.4232C60.9356 66.4232 61.7156 66.2943 62.3074 66.0366C62.83 65.8336 63.2799 65.4796 63.5994 65.02C63.8624 64.6209 64.0029 64.154 64.0036 63.6765C64.0051 63.3113 63.9269 62.9502 63.7746 62.6181Z" fill="black"/>
+              <defs>
+              <pattern id="pattern0_9_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_9_422" transform="scale(0.00862069)"/>
+              </pattern>
+              <image id="image0_9_422" width="116" height="116" xlink:href="data:image/png;base64,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"/>
+              </defs>
+              </svg>
+            <article class="feature-info">
+              <h3 class="feature-title">Store Near You</h3>
+              <p class="feature-subtitle">Find Local Stores</p>
+            </article>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <svg width="91" height="90" viewBox="0 0 91 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="90" height="90" transform="translate(0.5)" fill="url(#pattern0_9_430)"/>
+              <defs>
+              <pattern id="pattern0_9_430" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_9_430" transform="scale(0.00862069)"/>
+              </pattern>
+              <image id="image0_9_430" width="116" height="116" xlink:href="data:image/png;base64,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"/>
+              </defs>
+              </svg>
+            <article class="feature-info">
+              <h3 class="feature-title">Customer Care</h3>
+              <p class="feature-subtitle">24/7 Support</p>
+            </article>
+          </div>
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <svg width="91" height="90" viewBox="0 0 91 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="90" height="90" transform="translate(0.5)" fill="url(#pattern0_9_426)"/>
+              <defs>
+              <pattern id="pattern0_9_426" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_9_426" transform="scale(0.00862069)"/>
+              </pattern>
+              <image id="image0_9_426" width="116" height="116" xlink:href="data:image/png;base64,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"/>
+              </defs>
+              </svg>
+            <article class="feature-info">
+              <h3 class="feature-title">Trends Club Benefits</h3>
+              <p class="feature-subtitle">Exclusive Rewards</p>
+            </article>
+          </div>
+        </div>
+      </section>     
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gy-4"> 
+          <!-- Shop Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Shop</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#">Women</a></li>
+              <li class="mb-2"><a href="#">Men</a></li>
+              <li class="mb-2"><a href="#">Kids</a></li>
+              <li class="mb-2"><a href="#">Home Trends</a></li>
+            </ul>
+          </div>
+
+                      <!-- Need Help Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Need Help?</h5>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2 d-flex align-items-center">
+                <img src="./Assets/SVG/phone-icon.svg" alt="Phone Icon" class="me-2">
+                <a href="tel:02323233232" class="font-weight-bold">02323233232</a>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img src="./Assets/SVG/phone-icon-alt.svg" alt="Alt Phone Icon" class="me-2">
+                <a href="tel:0322033443" class="font-weight-bold">0322033443</a>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img src="./Assets/SVG/email-icon.svg" alt="Email Icon" class="me-2">
+                <a href="mailto:info@trends.com" class="font-weight-bold">info@trends.com</a>
+              </li>
+            </ul>
+            <div class="account-options">
+              <a href="#" class="d-block">My Account</a>
+              <a href="./Login.html" class="d-block">Sign In</a>
+            </div>
+          </div>
+          <!-- Customer Care Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Customer Care</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="./contact.html">Contact Us</a></li>
+              <li class="mb-2"><a href="#">Delivery & Orders</a></li>
+              <li class="mb-2"><a href="#">Terms and Conditions</a></li>
+              <li class="mb-2"><a href="#">Payment Guide</a></li>
+              <li class="mb-2"><a href="#">Privacy Policy</a></li>
+              <li class="mb-2"><a href="#">Track My Order</a></li>
+              <li class="mb-2"><a href="#">Returns & Exchange</a></li>
+            </ul>
+          </div>
+
+          <!-- Social & Payment Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Follow Us</h5>
+            <div class="social-icons mb-4">
+              <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <h5 class="text-uppercase mb-4">We Accept</h5>
+            <div class="payment-methods d-flex align-items-center">
+              <img src="./Assets/footersvg/Item → cash-on-delivery.png.svg" alt="cash-on-delivery" class="me-3">
+              <img src="./Assets/footersvg/Item → visa.png.svg" alt="Visa" class="me-3">
+              <img src="./Assets/footersvg/Item → mastercard.png.svg" alt="Mastercard" class="me-3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright mt-5">
+          <p class="text-center mb-0">© 2024 Trends by Meezab. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    
+    </div>
+
+      <!-- bootstrap - 5 - js  -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"crossorigin="anonymous"></script>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <!--swiper - js - code-->
+      <script src="./js/swiper.js"></script>
+      <script src="./js/Cartstate.js"></script>
+      <script src="./js/ProductPage.js"></script>
+      <script src="./js/Loader.js"></script>
+
+
+      <!-- custom - code-script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".testimonial-track");
+  const cards = document.querySelectorAll(".testimonial-card");
+  const prevButton = document.querySelector(".prev-button");
+  const nextButton = document.querySelector(".next-button");
+
+  let currentIndex = 0;
+  const cardWidth = 100 / (window.innerWidth >= 768 ? 2 : 1); // Show 2 cards on desktop, 1 on mobile
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${currentIndex * cardWidth}%)`;
+  }
+
+  prevButton.addEventListener("click", () => {
+    currentIndex = Math.max(currentIndex - 1, 0);
+    updateSlider();
+  });
+
+  nextButton.addEventListener("click", () => {
+    const maxIndex = cards.length - (window.innerWidth >= 768 ? 2 : 1);
+    currentIndex = Math.min(currentIndex + 1, maxIndex);
+    updateSlider();
+  });
+
+  // Update cards shown on window resize
+  window.addEventListener("resize", () => {
+    const maxIndex = cards.length - (window.innerWidth >= 768 ? 2 : 1);
+    currentIndex = Math.min(currentIndex, maxIndex);
+    updateSlider();
+  });
+});
+
+    </script>
+</body>
+</html>
