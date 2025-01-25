@@ -9,32 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Font Awesome for Icons -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      .login {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: url("./Assets/bglogin.png") no-repeat center center/cover;
-      }
-      .form-container {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
-        border-radius: 8px;
-        padding: 20px;
-        max-width: 450px;
-        width: 100%;
-      }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"rel="stylesheet"/>
+    <!-- login - css -->
+     <link rel="stylesheet" href="css/login.css">
   </head>
   <body>
     <!-- loader -->
@@ -45,7 +24,7 @@
       </div>
       <div id="loading-content"></div>
     </div>
-    <!-- header -->
+    <!--header  -->
     <header>
       <div class="tagline">
         <span>Get free shipping</span>
@@ -54,10 +33,10 @@
         <div class="net-bar py-2 px-3 d-none d-lg-flex">
           <!-- Placeholder box on the left -->
           <div class="placeholder-box"></div>
-
+  
           <!-- Logo in the center -->
           <div class="logo logocenter">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.html">
               <img src="./Assets/Logo.png" alt="Logo" height="50" />
             </a>
           </div>
@@ -88,7 +67,7 @@
                     stroke-miterlimit="10"
                   />
                 </svg>
-
+  
                 Login
               </a>
             </div>
@@ -158,15 +137,14 @@
                     stroke-linecap="round"
                   />
                 </svg>
-
+  
                 My Order
               </a>
             </div>
             <div class="icon-item">
               <a
                 href="#"
-                id="cart-icon"
-                class="d-flex align-items-center text-decoration-none text-dark flex-column"
+                class="d-flex align-items-center text-decoration-none text-dark flex-column "
               >
                 <svg
                   width="26"
@@ -209,6 +187,15 @@
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    All PRODUCTS
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Items 1</a></li>
+                    <li><a class="dropdown-item" href="#">Items 1</a></li>
+                  </ul>
+                </li>
+              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   FOR WOMEN
                 </a>
@@ -228,7 +215,7 @@
               </li>
              
               <li class="nav-item">
-                <a class="nav-link" href="./product-listing.html">SALE</a>
+                <a class="nav-link" href="./product-listing.html">BRANDS</a>
               </li>
             </ul>
             <form class="search-form ms-auto" id="searchForm">
@@ -243,7 +230,7 @@
           </div>
         </div>
       </nav>
-
+  
       <!-- Mobile Navigation -->
       <nav class="navbar bg-white border-bottom py-2 d-lg-none"">
         <div class="container-fluid px-3">
@@ -251,12 +238,12 @@
             <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                 <i class="bi bi-list fs-4"></i>
             </button>
-
+  
             <!-- Logo -->
             <a class="navbar-brand m-0" href="/">
                 <img src="./Assets/Logo.png" alt="Logo" height="32">
             </a>
-
+  
             <!-- Icons -->
             <div class="d-flex align-items-center">
               <!-- Login Icon -->
@@ -324,7 +311,7 @@
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
-
+  
         <div class="offcanvas-body p-0">
             <!-- Search Bar -->
             <div class="px-4 py-3 border-bottom">
@@ -333,59 +320,51 @@
                     <input type="search" class="form-control ps-5 search-bar" placeholder="Search products">
                 </div>
             </div>
-
+  
             <!-- Navigation Links -->
             <div class="py-2">
-                <a href="#" class="nav-link px-4 py-2">FOR WOMEN</a>
-                <a href="#" class="nav-link px-4 py-2">FOR MEN</a>
-                <a href="#" class="nav-link px-4 py-2">FOR KIDS</a>
-                
-                <!-- Pages Dropdown -->
-                <div class="nav-item">
-                    <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#pagesSubmenu">
-                            HOME APPLIANCES
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
-                    <div class="collapse" id="pagesSubmenu">
-                        <div class="bg-light py-2">
-                            <a href="#" class="nav-link px-4 py-2">My Account</a>
-                            <a href="#" class="nav-link px-4 py-2">Login / Register</a>
-                            <a href="#" class="nav-link px-4 py-2">Store Locator</a>
-                            <a href="#" class="nav-link px-4 py-2">Lookbook</a>
-                            <a href="#" class="nav-link px-4 py-2">FAQ</a>
-                            <a href="#" class="nav-link px-4 py-2">Terms</a>
-                            <a href="#" class="nav-link px-4 py-2">404 Error</a>
-                            <a href="#" class="nav-link px-4 py-2">Coming Soon</a>
-                        </div>
-                    </div>
-                </div>
+              <!-- Pages Dropdown - 1 -->
+              <div class="nav-item">
+                  <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                          data-bs-toggle="collapse" 
+                          data-bs-target="#pagesSubmenu">
+                          ALL PRODUCTS
+                      <i class="bi bi-chevron-right"></i>
+                  </button>
+                  <div class="collapse" id="pagesSubmenu">
+                      <div class="py-2">
+                          <a href="#" class="nav-link px-4 py-2">Items 1</a>
+                          <a href="#" class="nav-link px-4 py-2">Items 2</a>
+                      </div>
+                  </div>
+              </div>
+                <a href="./women.html" class="nav-link px-4 py-2">FOR WOMEN</a>
+                <a href="./men.html" class="nav-link px-4 py-2">FOR MEN</a>
+                <a href="./kids.html" class="nav-link px-4 py-2">FOR KIDS</a>
+                <a href="./home-appliance.html" class="nav-link px-4 py-2">HOME APPLIANCES</a>
                 
                 <a href="#" class="nav-link px-4 py-2">SALE</a>
-                <a href="#" class="nav-link px-4 py-2">ABOUT</a>
-                <a href="#" class="nav-link px-4 py-2">CONTACT</a>
+                <div class="nav-item">
+                  <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                          data-bs-toggle="collapse" 
+                          data-bs-target="#pagesSub">
+                          BRAND
+                      <i class="bi bi-chevron-right"></i>
+                  </button>
+                  <div class="collapse" id="pagesSub">
+                      <div class="py-2">
+                          <a href="#" class="nav-link px-4 py-2">BRAND 1</a>
+                          <a href="#" class="nav-link px-4 py-2">BRAND 2</a>
+                      </div>
+                  </div>
+              </div>
+                <a href="./about.html" class="nav-link px-4 py-2">ABOUT</a>
+                <a href="./contact.html" class="nav-link px-4 py-2">CONTACT</a>
             </div>
-
-            <!-- Language & Currency -->
-            <div class="border-top px-4 py-4">
-                <div class="mb-4">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="text-muted small">Language</span>
-                        <button class="btn btn-outline-secondary btn-sm">
-                            United Kingdom | English
-                        </button>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-muted small">Currency</span>
-                        <button class="btn btn-outline-secondary btn-sm">
-                            $ USD
-                        </button>
-                    </div>
-                </div>
-
+  
+            <div class="border-top">
                 <!-- Social Links -->
-                <div class="border-top pt-4 text-center">
+                <div class=" mt-5 text-right">
                     <a href="#" class="btn btn-link text-dark px-2">
                         <i class="bi bi-facebook"></i>
                     </a>
@@ -399,7 +378,7 @@
             </div>
         </div>
       </div>
-    </header>
+      </header>
     <!-- login -->
     <div class="login">
       <!-- main-login -->
@@ -584,7 +563,9 @@
     <!-- Bootstrap JS and Icons -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
-
+    <script src="./js/swiper.js"></script>
+    <script src="./js/Cartstate.js"></script>
+    <script src="./js/Loader.js"></script>
     <!-- Custom JS -->
     <script>
       function togglePassword() {
@@ -599,28 +580,6 @@
         }
       }
 
-
-
-
-      
-      // custom - loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const logo = document.getElementById("logo");
-
-        // Check if logo image loads correctly
-        logo.onload = () => {
-          console.log("Logo loaded successfully.");
-        };
-
-        logo.onerror = () => {
-          console.error("Failed to load logo. Please check the URL.");
-        };
-
-        // Simulate loading completion after 3 seconds (optional)
-        setTimeout(() => {
-          document.getElementById("loading-wrapper").style.display = "none";
-        }, 3000);
-      });
     </script>
   </body>
 </html>

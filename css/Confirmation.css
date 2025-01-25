@@ -1,0 +1,10 @@
+.success-icon svg {
+    width: 100px;
+    background-color: #c22b4c;
+    color: #fff;
+    border-radius: 50%;
+}
+.card{
+    border: none;
+    box-shadow: none;
+}

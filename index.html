@@ -1,547 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TrendsWebsite</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
+    <title>Trends</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Font Awesome for Icons -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="loading-wrapper">
-      <div id="logo-wrapper">
-        <img id="logo" src="./Assets/Logo.png" alt="Logo">
-        <div id="loading-text">LOADING</div>
-      </div>
-      <div id="loading-content"></div>
-    </div>
-    
-    
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
     <div id="root">
-      <!-- header -->
+        <!-- website-loader -->
+        <div id="loading-wrapper">
+          <div id="logo-wrapper">
+            <img id="logo" src="./Assets/Logo.png" alt="Logo" />
+            <div id="loading-text">LOADING</div>
+          </div>
+          <div id="loading-content"></div>
+        </div>
+      <!-- website-header -->
       <header>
-        <div class="tagline">
-          <span>Get free shipping</span>
-        </div>
-        <div class="container">
-          <div class="net-bar py-2 px-3 d-none d-lg-flex">
-            <!-- Placeholder box on the left -->
-            <div class="placeholder-box"></div>
-
-            <!-- Logo in the center -->
-            <div class="logo logocenter">
-              <a class="navbar-brand" href="#">
-                <img src="./Assets/Logo.png" alt="Logo" height="50" />
-              </a>
+            <div class="tagline">
+              <span>Get free shipping</span>
             </div>
-            <!-- Icons on the right -->
-            <div class="icons-section">
-              <div class="icon-item">
-                <a
-                  href="./Login.html"
-                  class="nav-link d-flex flex-column align-items-center"
-                >
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                    />
-                  </svg>
-
-                  Login
-                </a>
-              </div>
-              <div class="icon-item">
-                <a
-                  href="#"
-                  class="nav-link d-flex flex-column align-items-center"
-                >
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7.00488 15.24C9.97338 15.24 12.3799 12.8335 12.3799 9.86499C12.3799 6.89646 9.97338 4.48999 7.00488 4.48999C4.03635 4.48999 1.62988 6.89646 1.62988 9.86499C1.62988 12.8335 4.03635 15.24 7.00488 15.24Z"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M7.1924 21.8025C8.50408 21.8025 9.5674 20.7392 9.5674 19.4275C9.5674 18.1158 8.50408 17.0525 7.1924 17.0525C5.8807 17.0525 4.81738 18.1158 4.81738 19.4275C4.81738 20.7392 5.8807 21.8025 7.1924 21.8025Z"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M20.6299 21.8025C21.9416 21.8025 23.0049 20.7392 23.0049 19.4275C23.0049 18.1158 21.9416 17.0525 20.6299 17.0525C19.3182 17.0525 18.2549 18.1158 18.2549 19.4275C18.2549 20.7392 19.3182 21.8025 20.6299 21.8025Z"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M3.56738 9.86499L5.94238 12.24L10.3174 7.92749"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M13.1924 7.92749H20.0674L23.9424 11.4275V18.6775H22.8799"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M17.7549 8.23999V12.865H23.5049"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M18.2549 18.9275H9.50488"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M4.81738 18.9275H3.56738V16.0525"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-
-                  My Order
-                </a>
-              </div>
-              <div class="icon-item">
-                <a
-                  href="#"
-                  id="cart-icon"
-                  class="d-flex align-items-center text-decoration-none text-dark flex-column"
-                >
-                  <svg
-                    width="26"
-                    height="26"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                  >
-                    <path
-                      d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <span id="cart-total" class="ms-2">Rs.0</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="off">
-          <div class="marquee-container">
-            <div class="marquee">
-              <span>Flat 40% off Avail now</span>
-            </div>
-          </div>
-        </div>        
-        <!-- main-navabr-start -->
-        <!-- Desktop Navigation -->
-        <nav class="navbar navbar-expand-lg d-none d-lg-block">
-          <div class="container">
-            <div class="placeholder-box"></div>
-        
-            <div class="collapse navbar-collapse">
-              <ul class="navbar-nav align-items-center">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    FOR WOMEN
+            <div class="container">
+              <div class="net-bar py-2 px-3 d-none d-lg-flex">
+                <!-- Placeholder box on the left -->
+                <div class="placeholder-box"></div>
+    
+                <!-- Logo in the center -->
+                <div class="logo logocenter">
+                  <a class="navbar-brand" href="./index.html">
+                    <img src="./Assets/Logo.png" alt="Logo" height="50" />
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Items 1</a></li>
-                    <li><a class="dropdown-item" href="#">Items 1</a></li>
+                </div>
+                <!-- Icons on the right -->
+                <div class="icons-section">
+                  <div class="icon-item">
+                    <a
+                      href="./Login.html"
+                      class="nav-link d-flex flex-column align-items-center"
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+    
+                      Login
+                    </a>
+                  </div>
+                  <div class="icon-item">
+                    <a
+                      href="#"
+                      class="nav-link d-flex flex-column align-items-center"
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.00488 15.24C9.97338 15.24 12.3799 12.8335 12.3799 9.86499C12.3799 6.89646 9.97338 4.48999 7.00488 4.48999C4.03635 4.48999 1.62988 6.89646 1.62988 9.86499C1.62988 12.8335 4.03635 15.24 7.00488 15.24Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M7.1924 21.8025C8.50408 21.8025 9.5674 20.7392 9.5674 19.4275C9.5674 18.1158 8.50408 17.0525 7.1924 17.0525C5.8807 17.0525 4.81738 18.1158 4.81738 19.4275C4.81738 20.7392 5.8807 21.8025 7.1924 21.8025Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M20.6299 21.8025C21.9416 21.8025 23.0049 20.7392 23.0049 19.4275C23.0049 18.1158 21.9416 17.0525 20.6299 17.0525C19.3182 17.0525 18.2549 18.1158 18.2549 19.4275C18.2549 20.7392 19.3182 21.8025 20.6299 21.8025Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M3.56738 9.86499L5.94238 12.24L10.3174 7.92749"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M13.1924 7.92749H20.0674L23.9424 11.4275V18.6775H22.8799"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M17.7549 8.23999V12.865H23.5049"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M18.2549 18.9275H9.50488"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M4.81738 18.9275H3.56738V16.0525"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+    
+                      My Order
+                    </a>
+                  </div>
+                  <div class="icon-item">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center text-decoration-none text-dark flex-column "
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span id="cart-total" class="ms-2">Rs.0</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="off">
+              <div class="marquee-container">
+                <div class="marquee">
+                  <span>Flat 40% off Avail now</span>
+                </div>
+              </div>
+            </div>        
+            <!-- main-navabr-start -->
+            <!-- Desktop Navigation -->
+            <nav class="navbar navbar-expand-lg d-none d-lg-block">
+              <div class="container">
+                <div class="placeholder-box"></div>
+            
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          All PRODUCTS
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Items 1</a></li>
+                          <li><a class="dropdown-item" href="#">Items 1</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        FOR WOMEN
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Items 1</a></li>
+                        <li><a class="dropdown-item" href="#">Items 1</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">FOR MEN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">FOR KIDS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">HOME APPLIANCES</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                      <a class="nav-link" href="./product-listing.html">BRANDS</a>
+                    </li>
                   </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">FOR MEN</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">FOR KIDS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">HOME APPLIANCES</a>
-                </li>
-               
-                <li class="nav-item">
-                  <a class="nav-link" href="./product-listing.html">SALE</a>
-                </li>
-              </ul>
-              <form class="search-form ms-auto" id="searchForm">
-                <input
-                  class="form-control search-bar"
-                  type="search"
-                  id="searchInput"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
+                  <form class="search-form ms-auto" id="searchForm">
+                    <input
+                      class="form-control search-bar"
+                      type="search"
+                      id="searchInput"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </form>
+                </div>
+              </div>
+            </nav>
+    
+            <!-- Mobile Navigation -->
+            <nav class="navbar bg-white border-bottom py-2 d-lg-none"">
+              <div class="container-fluid px-3">
+                  <!-- Menu Trigger -->
+                  <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                      <i class="bi bi-list fs-4"></i>
+                  </button>
+    
+                  <!-- Logo -->
+                  <a class="navbar-brand m-0" href="/">
+                      <img src="./Assets/Logo.png" alt="Logo" height="32">
+                  </a>
+    
+                  <!-- Icons -->
+                  <div class="d-flex align-items-center">
+                    <!-- Login Icon -->
+                    <a
+                      href="./Login.html"
+                      class="nav-link d-flex flex-column align-items-center"
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+                    </a>
+                    <!-- Cart Icon -->
+                    <a
+                      href="#"
+                      id="cart-icon"
+                      class="d-flex align-items-center text-decoration-none text-dark flex-column "
+                      
+                    >
+                      <svg
+                        width="26"
+                        height="26"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
+                          stroke="#C22B4C"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <!-- <span id="cart-total" class="ms-2">Rs.0</span> -->
+                    </a>
+                  </div>
+              </div>
+            </nav>
+            <!-- Mobile Menu Offcanvas -->
+            <div class="offcanvas offcanvas-start d-lg-none" id="mobileMenu">
+              <div class="offcanvas-header border-bottom px-4 py-3">
+                  <a href="./index.html" class="offcanvas-title">
+                      <img src="./Assets/Logo.png" alt="Logo" height="32">
+                  </a>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+              </div>
+    
+              <div class="offcanvas-body p-0">
+                  <!-- Search Bar -->
+                  <div class="px-4 py-3 border-bottom">
+                      <div class="position-relative">
+                          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                          <input type="search" class="form-control ps-5 search-bar" placeholder="Search products">
+                      </div>
+                  </div>
+    
+                  <!-- Navigation Links -->
+                  <div class="py-2">
+                    <!-- Pages Dropdown - 1 -->
+                    <div class="nav-item">
+                        <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#pagesSubmenu">
+                                ALL PRODUCTS
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                        <div class="collapse" id="pagesSubmenu">
+                            <div class="py-2">
+                                <a href="#" class="nav-link px-4 py-2">Items 1</a>
+                                <a href="#" class="nav-link px-4 py-2">Items 2</a>
+                            </div>
+                        </div>
+                    </div>
+                      <a href="./women.html" class="nav-link px-4 py-2">FOR WOMEN</a>
+                      <a href="./men.html" class="nav-link px-4 py-2">FOR MEN</a>
+                      <a href="./kids.html" class="nav-link px-4 py-2">FOR KIDS</a>
+                      <a href="./home-appliance.html" class="nav-link px-4 py-2">HOME APPLIANCES</a>
+                      
+                      <a href="#" class="nav-link px-4 py-2">SALE</a>
+                      <div class="nav-item">
+                        <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#pagesSub">
+                                BRAND
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                        <div class="collapse" id="pagesSub">
+                            <div class="py-2">
+                                <a href="#" class="nav-link px-4 py-2">BRAND 1</a>
+                                <a href="#" class="nav-link px-4 py-2">BRAND 2</a>
+                            </div>
+                        </div>
+                    </div>
+                      <a href="./about.html" class="nav-link px-4 py-2">ABOUT</a>
+                      <a href="./contact.html" class="nav-link px-4 py-2">CONTACT</a>
+                  </div>
+    
+                  <div class="border-top">
+                      <!-- Social Links -->
+                      <div class=" mt-5 text-right">
+                          <a href="#" class="btn btn-link text-dark px-2">
+                              <i class="bi bi-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-link text-dark px-2">
+                              <i class="bi bi-twitter"></i>
+                          </a>
+                          <a href="#" class="btn btn-link text-dark px-2">
+                              <i class="bi bi-instagram"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
             </div>
-          </div>
-        </nav>
-
-        <!-- Mobile Navigation -->
-        <nav class="navbar bg-white border-bottom py-2 d-lg-none"">
-          <div class="container-fluid px-3">
-              <!-- Menu Trigger -->
-              <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                  <i class="bi bi-list fs-4"></i>
-              </button>
-
-              <!-- Logo -->
-              <a class="navbar-brand m-0" href="/">
-                  <img src="./Assets/Logo.png" alt="Logo" height="32">
-              </a>
-
-              <!-- Icons -->
-              <div class="d-flex align-items-center">
-                <!-- Login Icon -->
-                <a
-                  href="./Login.html"
-                  class="nav-link d-flex flex-column align-items-center"
-                >
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.9502 13.615C15.9188 13.615 18.3252 11.2085 18.3252 8.24C18.3252 5.27147 15.9188 2.86499 12.9502 2.86499C9.9817 2.86499 7.5752 5.27147 7.5752 8.24C7.5752 11.2085 9.9817 13.615 12.9502 13.615Z"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M1.7002 23.615C1.7002 17.365 6.7002 15.24 12.9502 15.24C19.2002 15.24 24.2002 17.365 24.2002 23.615"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-miterlimit="10"
-                    />
-                  </svg>
-                </a>
-                <!-- Cart Icon -->
-                <a
-                  href="#"
-                  id="cart-icon"
-                  class="d-flex align-items-center text-decoration-none text-dark flex-column "
-                  
-                >
-                  <svg
-                    width="26"
-                    height="26"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                  >
-                    <path
-                      d="M5.365 23.78L2.803 7.842h20.375L20.615 23.78H5.365Z"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M7.428 7.53C7.428 6.054 8.014 4.64 9.057 3.597c1.043-1.043 2.458-1.63 3.933-1.63 1.475 0 2.89.587 3.933 1.63 1.043 1.043 1.63 2.458 1.63 3.933"
-                      stroke="#C22B4C"
-                      stroke-width="0.9"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <!-- <span id="cart-total" class="ms-2">Rs.0</span> -->
-                </a>
-              </div>
-          </div>
-        </nav>
-        <!-- Mobile Menu Offcanvas -->
-        <div class="offcanvas offcanvas-start d-lg-none" id="mobileMenu">
-          <div class="offcanvas-header border-bottom px-4 py-3">
-              <a href="./index.html" class="offcanvas-title">
-                  <img src="./Assets/Logo.png" alt="Logo" height="32">
-              </a>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-          </div>
-
-          <div class="offcanvas-body p-0">
-              <!-- Search Bar -->
-              <div class="px-4 py-3 border-bottom">
-                  <div class="position-relative">
-                      <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
-                      <input type="search" class="form-control ps-5 search-bar" placeholder="Search products">
-                  </div>
-              </div>
-
-              <!-- Navigation Links -->
-              <div class="py-2">
-                  <a href="#" class="nav-link px-4 py-2">FOR WOMEN</a>
-                  <a href="#" class="nav-link px-4 py-2">FOR MEN</a>
-                  <a href="#" class="nav-link px-4 py-2">FOR KIDS</a>
-                  
-                  <!-- Pages Dropdown -->
-                  <div class="nav-item">
-                      <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
-                              data-bs-toggle="collapse" 
-                              data-bs-target="#pagesSubmenu">
-                              HOME APPLIANCES
-                          <i class="bi bi-chevron-right"></i>
-                      </button>
-                      <div class="collapse" id="pagesSubmenu">
-                          <div class="bg-light py-2">
-                              <a href="#" class="nav-link px-4 py-2">My Account</a>
-                              <a href="#" class="nav-link px-4 py-2">Login / Register</a>
-                              <a href="#" class="nav-link px-4 py-2">Store Locator</a>
-                              <a href="#" class="nav-link px-4 py-2">Lookbook</a>
-                              <a href="#" class="nav-link px-4 py-2">FAQ</a>
-                              <a href="#" class="nav-link px-4 py-2">Terms</a>
-                              <a href="#" class="nav-link px-4 py-2">404 Error</a>
-                              <a href="#" class="nav-link px-4 py-2">Coming Soon</a>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <a href="#" class="nav-link px-4 py-2">SALE</a>
-                  <a href="#" class="nav-link px-4 py-2">ABOUT</a>
-                  <a href="#" class="nav-link px-4 py-2">CONTACT</a>
-              </div>
-
-              <!-- Language & Currency -->
-              <div class="border-top px-4 py-4">
-                  <div class="mb-4">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                          <span class="text-muted small">Language</span>
-                          <button class="btn btn-outline-secondary btn-sm">
-                              United Kingdom | English
-                          </button>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center">
-                          <span class="text-muted small">Currency</span>
-                          <button class="btn btn-outline-secondary btn-sm">
-                              $ USD
-                          </button>
-                      </div>
-                  </div>
-
-                  <!-- Social Links -->
-                  <div class="border-top pt-4 text-center">
-                      <a href="#" class="btn btn-link text-dark px-2">
-                          <i class="bi bi-facebook"></i>
-                      </a>
-                      <a href="#" class="btn btn-link text-dark px-2">
-                          <i class="bi bi-twitter"></i>
-                      </a>
-                      <a href="#" class="btn btn-link text-dark px-2">
-                          <i class="bi bi-instagram"></i>
-                      </a>
-                  </div>
-              </div>
-          </div>
-        </div>
       </header>
-      <!-- Hero Slider -->
-      <section class="slider_section">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="./Assets/cbanner.png"
-                class="d-block w-100"
-                alt="Placeholder 1"
-              />
-              <!-- <div class="carousel-content">
-                <h3>
-                  Winter <br />
-                  <span>Collection</span> <br />Flat 40% off
-                </h3>
-                <button class="view-more-btn">SHOP NOW</button>
-              </div> -->
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./Assets/cbanner.png"
-                class="d-block w-100"
-                alt="Placeholder 1"
-              />
-              <!-- <div class="carousel-content">
-                <h3>
-                  Winter <br />
-                  <span>Collection</span> <br />Flat 40% off
-                </h3>
-                <button class="view-more-btn">SHOP NOW</button>
-              </div> -->
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./Assets/cbanner.png"
-                class="d-block w-100"
-                alt="Placeholder 1"
-              />
-              <!-- <div class="carousel-content">
-                <h3>
-                  Winter <br />
-                  <span>Collection</span> <br />Flat 40% off
-                </h3>
-                <button class="view-more-btn">SHOP NOW</button>
-              </div> -->
-            </div>
-          </div>
-          <div class="review-button">
-            <span>Our Reviews ⭐</span>
-          </div>
-        </div>
-      </section>
-      <!--CategoryCard  -->
-      <div class="container py-3">
-        <!-- Desktop Grid -->
-        <div class="desktop-grid">
-          <a href="/women" class="category-card">
-            <img src="./Assets/WOMEN.png" alt="Women's Fashion" />
-            <div class="category-overlay">
-              <span class="category-title">WOMEN</span>
-            </div>
-          </a>
-          <a href="/men" class="category-card">
-            <img src="./Assets/MEN.png" alt="Men's Fashion" />
-            <div class="category-overlay">
-              <span class="category-title">MEN</span>
-            </div>
-          </a>
-          <a href="/kids" class="category-card">
-            <img src="./Assets/KIDS.png" alt="Kids Fashion" />
-            <div class="category-overlay">
-              <span class="category-title">KIDS</span>
-            </div>
-          </a>
-          <a href="/home-trends" class="category-card">
-            <img src="./Assets/HOMETRENDS.png" alt="Home Trends" />
-            <div class="category-overlay">
-              <span class="category-title">HOME TRENDS</span>
-            </div>
-          </a>
-          <a href="/accessories" class="category-card">
-            <img src="./Assets/ACCESSORIES.png" alt="Accessories" />
-            <div class="category-overlay">
-              <span class="category-title">ACCESSORIES</span>
-            </div>
-          </a>
-          <a href="/sale" class="category-card">
-            <img src="./Assets/SALE.png" alt="Sale" />
-            <div class="category-overlay">
-              <span class="category-title">SALE</span>
-            </div>
-          </a>
-        </div>
 
-        <!-- Mobile Slider -->
-        <div class="mobile-slider">
-          <div class="swiper category-swiper">
+      <!--main-silder  -->
+      <section class="slider_section">
+          <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="/women" class="category-card">
-                  <img src="./Assets/WOMEN.png" alt="Women's Fashion" />
-                  <div class="category-overlay">
-                    <span class="category-title">WOMEN</span>
-                  </div>
-                </a>
+                <img
+                  src="./Assets/cbanner.png"
+                  class="d-block w-100"
+                  alt="Placeholder 1"
+
+                />
               </div>
               <div class="swiper-slide">
-                <a href="/men" class="category-card">
-                  <img src="./Assets/MEN.png" alt="Men's Fashion" />
-                  <div class="category-overlay">
-                    <span class="category-title">MEN</span>
-                  </div>
-                </a>
+                <img
+                  src="./Assets/cbanner.png"
+                  class="d-block w-100"
+                  alt="Placeholder 1"
+
+                />
               </div>
               <div class="swiper-slide">
-                <a href="/kids" class="category-card">
-                  <img src="./Assets/KIDS.png" alt="Kids Fashion" />
-                  <div class="category-overlay">
-                    <span class="category-title">KIDS</span>
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="/home-trends" class="category-card">
-                  <img src="./Assets/HOMETRENDS.png" alt="Home Trends" />
-                  <div class="category-overlay">
-                    <span class="category-title">HOME TRENDS</span>
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="/accessories" class="category-card">
-                  <img src="./Assets/ACCESSORIES.png" alt="Accessories" />
-                  <div class="category-overlay">
-                    <span class="category-title">ACCESSORIES</span>
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="/sale" class="category-card">
-                  <img src="./Assets/SALE.png" alt="Sale" />
-                  <div class="category-overlay">
-                    <span class="category-title">SALE</span>
-                  </div>
-                </a>
+                <img
+                  src="./Assets/cbanner.png"
+                  class="d-block w-100"
+                  alt="Placeholder 1"
+
+                />             
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="review-button">
+              <span>Our Reviews ⭐</span>
+            </div>
           </div>
-        </div>
+      </section>
+      
+      <!--CategoryCard  -->
+      <div class="container py-3">
+          <!-- Desktop Grid -->
+          <div class="desktop-grid">
+            <a href="/women" class="category-card">
+              <img src="./Assets/WOMEN.png" alt="Women's Fashion" loading="lazy" />
+              <div class="category-overlay">
+                <span class="category-title">WOMEN</span>
+              </div>
+            </a>
+            <a href="/men" class="category-card">
+              <img src="./Assets/MEN.png" alt="Men's Fashion" loading="lazy" />
+              <div class="category-overlay">
+                <span class="category-title">MEN</span>
+              </div>
+            </a>
+            <a href="/kids" class="category-card">
+              <img src="./Assets/KIDS.png" alt="Kids Fashion" loading="lazy"/>
+              <div class="category-overlay">
+                <span class="category-title">KIDS</span>
+              </div>
+            </a>
+            <a href="/home-trends" class="category-card">
+              <img src="./Assets/HOMETRENDS.png" alt="Home Trends"  loading="lazy"/>
+              <div class="category-overlay">
+                <span class="category-title">HOME TRENDS</span>
+              </div>
+            </a>
+            <a href="/accessories" class="category-card">
+              <img src="./Assets/ACCESSORIES.png" alt="Accessories" loading="lazy"/>
+              <div class="category-overlay">
+                <span class="category-title">ACCESSORIES</span>
+              </div>
+            </a>
+            <a href="/sale" class="category-card">
+              <img src="./Assets/SALE.png" alt="Sale" loading="lazy" />
+              <div class="category-overlay">
+                <span class="category-title">SALE</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Mobile Slider -->
+          <div class="mobile-slider">
+            <div class="swiper category-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="/women" class="category-card">
+                    <img src="./Assets/WOMEN.png" alt="Women's Fashion" loading="lazy"/>
+                    <div class="category-overlay">
+                      <span class="category-title">WOMEN</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/men" class="category-card">
+                    <img src="./Assets/MEN.png" alt="Men's Fashion" loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">MEN</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/kids" class="category-card">
+                    <img src="./Assets/KIDS.png" alt="Kids Fashion" loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">KIDS</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/home-trends" class="category-card">
+                    <img src="./Assets/HOMETRENDS.png" alt="Home Trends" loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">HOME TRENDS</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/accessories" class="category-card">
+                    <img src="./Assets/ACCESSORIES.png" alt="Accessories"  loading="lazy" />
+                    <div class="category-overlay">
+                      <span class="category-title">ACCESSORIES</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="/sale" class="category-card">
+                    <img src="./Assets/SALE.png" alt="Sale" loading="lazy"/>
+                    <div class="category-overlay">
+                      <span class="category-title">SALE</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
       </div>
-      <!-- ProductSection -->
+
+      <!-- Product-Section -->
       <section class="container py-3 productSection">
         <div class="product-container">
           <!-- Product Card 1 -->
@@ -550,20 +522,19 @@
               src="./Assets/Articleone.png"
               alt="Product Image"
               class="product-image"
+              loading="lazy"
             />
             <article class="product-info">
-              <h2 class="product-title ">Article 1</h2>
+              <h2 class="product-title">Article 1</h2>
               <p class="product-price">
                 <span class="sale-price" data-price="99">Rs 99.00</span>
                 <span class="original-price">Rs 199.00</span>
               </p>
-              <!-- <button class="view-more-add" data-product="Article 1" data-price="99">Add to Cart</button> -->
               <button
                 class="view-more-add add-to-cart"
-                data-product="Article 1"
-                data-price="99"
+                id="cart-toggle"
               >
-                Add to Cart
+                Add to Cart <i class="bi bi-cart"></i>
               </button>
             </article>
           </div>
@@ -573,20 +544,20 @@
               src="./Assets/Articlestwo.png"
               alt="Product Image"
               class="product-image"
+              loading="lazy"
             />
             <article class="product-info">
               <h2 class="product-title">Article 2</h2>
               <p class="product-price">
-                <span class="sale-price">RS 149.00</span>
+                <span class="sale-price" data-price="144">RS 149.00</span>
                 <span class="original-price">RS 249.00</span>
               </p>
               <button
-                class="view-more-add add-to-cart"
-                data-product="Article 2"
-                data-price="149"
-              >
-                Add to Cart
-              </button>
+              class="view-more-add add-to-cart"
+              id="cart-toggle"
+            >
+              Add to Cart <i class="bi bi-cart"></i>
+            </button>
             </article>
           </div>
 
@@ -596,6 +567,7 @@
               src="./Assets/Articlesthree.png"
               alt="Product Image"
               class="product-image"
+              loading="lazy"
             />
             <article class="product-info">
               <h2 class="product-title">Article 3</h2>
@@ -605,10 +577,9 @@
               </p>
               <button
               class="view-more-add add-to-cart"
-              data-product="Article 3"
-              data-price="199"
+              id="cart-toggle"
             >
-              Add to Cart
+              Add to Cart <i class="bi bi-cart"></i>
             </button>
             </article>
           </div>
@@ -619,6 +590,7 @@
               src="./Assets/Articefour.png"
               alt="Product Image"
               class="product-image"
+              loading="lazy"
             />
             <article class="product-info">
               <h2 class="product-title">Article 4</h2>
@@ -628,10 +600,9 @@
               </p>
               <button
                 class="view-more-add add-to-cart"
-                data-product="Article 4"
-                data-price="299"
+                id="cart-toggle"
               >
-                Add to Cart
+                Add to Cart <i class="bi bi-cart"></i>
               </button>
             </article>
           </div>
@@ -640,51 +611,29 @@
           <button class="view-more-btn text-center">View More</button>
         </div>
       </section>
-      <!-- Sidebar -->
+      
+      <!-- Cart Sidebar -->
       <div id="cart-sidebar" class="cart-sidebar">
         <div class="cart-header d-flex justify-content-between align-items-center">
-          <h5>Your Cart</h5>
-          <button class="close-btn" id="close-sidebar">&times;</button>
+            <h5 class="mb-0">SHOPPING BAG (<span id="cart-count">3</span>)</h5>
+            <button class="btn-close" id="close-sidebar" aria-label="Close"></button>
         </div>
-        <div id="cart-items" class="cart-items">
-          <!-- Dynamic Content Goes Here -->
+
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
         </div>
-        <div class="accordion" id="cartAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Leave a note
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#cartAccordion">
-              <div class="accordion-body">
-                <textarea id="note" class="form-control" placeholder="Write something about your order..."></textarea>
-              </div>
+
+        <div class="cart-footer">
+            <hr>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="mb-0">SUBTOTAL:</h6>
+                <span class="fw-bold" id="subtotal">$0.00</span>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Your Order
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#cartAccordion">
-              <div class="accordion-body">
-                Subtotal: <span id="subtotal">Rs. 0</span><br>
-                Shipping: <span id="shipping">Rs. 50</span><br>
-                <div class="d-flex justify-content-between">
-                  <button class="btn btn-primary">Checkout</button>
-                  <span id="cart-total-sidebar">Total: Rs. 0</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div id="total-price">
-          <p>Total Price: <span id="total-price-value">Rs. 0</span></p>
+            <a href="shop_cart.html" class="btn btn-outline-dark w-100 mb-2">View Cart</a>
+            <a href=" Checkout.html" class="btn btn-dark w-100">Checkout</a>
         </div>
       </div>
+
       <!-- Banner Section -->
       <section class="banner-section py-5">
         <div class="container">
@@ -696,14 +645,8 @@
                   src="./Assets/bannerone.jpg"
                   alt="Bridal Collection"
                   class="img-fluid"
-                />
-                <!-- <div class="position-absolute top-50 start-0 text-white p-4">
-                  <h2 class="display-4">BRIDAL</h2>
-                  <p class="lead">COLLECTION</p>
-                  <a href="/collections/bridal" class="btn btn-danger"
-                    >SHOP NOW</a
-                  >
-                </div> -->
+                  loading="lazy"
+                  />
               </div>
             </div>
 
@@ -714,120 +657,118 @@
                   src="./Assets/bannertwo.jpg"
                   alt="Ready to Wear"
                   class="img-fluid"
-                />
-                <!-- <div
-                  class="position-absolute top-50 start-0 text-white p-4 mx-qq"
-                >
-                  <h2 class="display-4">READY</h2>
-                  <p class="lead">TO WEAR</p>
-                  <a href="/collections/ready-to-wear" class="btn btn-danger"
-                    >SHOP NOW</a
-                  >
-                </div> -->
+                  loading="lazy"
+                  />
               </div>
             </div>
           </div>
         </div>
       </section>
+    
       <!-- Productcard -->
       <section class="container py-3 productSection">
-        <div class="product-container">
-          <!-- Product Card 1 -->
-          <a href="Product_Page.html" class="product-card">
-            <img
-              src="./Assets/Articleone.png"
-              alt="Product Image"
-              class="product-image"
-            />
-            <article class="product-info">
-              <h2 class="product-title">Article 1</h2>
-              <p class="product-price">
-                <span class="sale-price" data-price="99">Rs 99.00</span>
-                <span class="original-price">Rs 199.00</span>
-              </p>
-              <button
-                class="view-more-add add-to-cart"
-                data-product="Article 1"
-                data-price="99"
-              >
-                Add to Cart
-              </button>
-            </article>
-          </a>
+              <div class="product-container">
+                <!-- Product Card 1 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articleone.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 1</h2>
+                    <p class="product-price">
+                      <span class="sale-price" data-price="99">Rs 99.00</span>
+                      <span class="original-price">Rs 199.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 1"
+                      data-price="99"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+            
+                <!-- Product Card 2 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articlestwo.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 2</h2>
+                    <p class="product-price">
+                      <span class="sale-price">RS 149.00</span>
+                      <span class="original-price">RS 249.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 2"
+                      data-price="149"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+            
+                <!-- Product Card 3 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articlesthree.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 3</h2>
+                    <p class="product-price">
+                      <span class="sale-price">RS 199.00</span>
+                      <span class="original-price">RS 399.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 3"
+                      data-price="199"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+            
+                <!-- Product Card 4 -->
+                <a href="Product_Page.html" class="product-card">
+                  <img
+                    src="./Assets/Articefour.png"
+                    alt="Product Image"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                  <article class="product-info">
+                    <h2 class="product-title">Article 4</h2>
+                    <p class="product-price">
+                      <span class="sale-price">RS 299.00</span>
+                      <span class="original-price">RS 499.00</span>
+                    </p>
+                    <button
+                      class="view-more-add add-to-cart"
+                      data-product="Article 4"
+                      data-price="299"
+                    >
+                      Add to Cart
+                    </button>
+                  </article>
+                </a>
+              </div>
+              <div class="d-flex justify-content-center align-items-center">
+                <button class="view-more-btn text-center">View More</button>
+              </div>
+      </section>
       
-          <!-- Product Card 2 -->
-          <a href="Product_Page.html" class="product-card">
-            <img
-              src="./Assets/Articlestwo.png"
-              alt="Product Image"
-              class="product-image"
-            />
-            <article class="product-info">
-              <h2 class="product-title">Article 2</h2>
-              <p class="product-price">
-                <span class="sale-price">RS 149.00</span>
-                <span class="original-price">RS 249.00</span>
-              </p>
-              <button
-                class="view-more-add add-to-cart"
-                data-product="Article 2"
-                data-price="149"
-              >
-                Add to Cart
-              </button>
-            </article>
-          </a>
-      
-          <!-- Product Card 3 -->
-          <a href="Product_Page.html" class="product-card">
-            <img
-              src="./Assets/Articlesthree.png"
-              alt="Product Image"
-              class="product-image"
-            />
-            <article class="product-info">
-              <h2 class="product-title">Article 3</h2>
-              <p class="product-price">
-                <span class="sale-price">RS 199.00</span>
-                <span class="original-price">RS 399.00</span>
-              </p>
-              <button
-                class="view-more-add add-to-cart"
-                data-product="Article 3"
-                data-price="199"
-              >
-                Add to Cart
-              </button>
-            </article>
-          </a>
-      
-          <!-- Product Card 4 -->
-          <a href="Product_Page.html" class="product-card">
-            <img
-              src="./Assets/Articefour.png"
-              alt="Product Image"
-              class="product-image"
-            />
-            <article class="product-info">
-              <h2 class="product-title">Article 4</h2>
-              <p class="product-price">
-                <span class="sale-price">RS 299.00</span>
-                <span class="original-price">RS 499.00</span>
-              </p>
-              <button
-                class="view-more-add add-to-cart"
-                data-product="Article 4"
-                data-price="299"
-              >
-                Add to Cart
-              </button>
-            </article>
-          </a>
-        </div>
-        <div class="d-flex justify-content-center align-items-center">
-          <button class="view-more-btn text-center">View More</button>
-        </div>
-      </section>     
       <!-- Testimonials Section -->
       <section class="testimonial-section">
         <div class="container">
@@ -976,7 +917,8 @@
           </div>
         </div>
       </section>
-      <!-- Email Signup Section -->
+      
+      <!-- NewsLetter-Section -->
       <section class="email-signup">
         <div class="container">
           <div class="row align-items-end">
@@ -1076,94 +1018,133 @@
             </article>
           </div>
         </div>
-      </section>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <div class="row gy-4"> <!-- Changed to gy-4 for better vertical spacing -->
-            <!-- Shop Column -->
-            <div class="col-lg-3 col-sm-6">
-              <h5 class="text-uppercase mb-4">Shop</h5>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-2"><a href="#">Women</a></li>
-                <li class="mb-2"><a href="#">Men</a></li>
-                <li class="mb-2"><a href="#">Kids</a></li>
-                <li class="mb-2"><a href="#">Home Trends</a></li>
-              </ul>
-            </div>
-
-                        <!-- Need Help Column -->
-            <div class="col-lg-3 col-sm-6">
-              <h5 class="text-uppercase mb-4 font-weight-bold">Need Help?</h5>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2 d-flex align-items-center">
-                  <img src="./Assets/SVG/phone-icon.svg" alt="Phone Icon" class="me-2">
-                  <a href="tel:02323233232" class="font-weight-bold">02323233232</a>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <img src="./Assets/SVG/phone-icon-alt.svg" alt="Alt Phone Icon" class="me-2">
-                  <a href="tel:0322033443" class="font-weight-bold">0322033443</a>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <img src="./Assets/SVG/email-icon.svg" alt="Email Icon" class="me-2">
-                  <a href="mailto:info@trends.com" class="font-weight-bold">info@trends.com</a>
-                </li>
-              </ul>
-              <div class="account-options">
-                <a href="#" class="d-block">My Account</a>
-                <a href="./Login.html" class="d-block">Sign In</a>
-              </div>
-            </div>
-            <!-- Customer Care Column -->
-            <div class="col-lg-3 col-sm-6">
-              <h5 class="text-uppercase mb-4">Customer Care</h5>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-2"><a href="./contact.html">Contact Us</a></li>
-                <li class="mb-2"><a href="#">Delivery & Orders</a></li>
-                <li class="mb-2"><a href="#">Terms and Conditions</a></li>
-                <li class="mb-2"><a href="#">Payment Guide</a></li>
-                <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                <li class="mb-2"><a href="#">Track My Order</a></li>
-                <li class="mb-2"><a href="#">Returns & Exchange</a></li>
-              </ul>
-            </div>
-
-            <!-- Social & Payment Column -->
-            <div class="col-lg-3 col-sm-6">
-              <h5 class="text-uppercase mb-4">Follow Us</h5>
-              <div class="social-icons mb-4">
-                <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
-              </div>
-              <h5 class="text-uppercase mb-4">We Accept</h5>
-              <div class="payment-methods d-flex align-items-center">
-                <img src="./Assets/footersvg/Item → cash-on-delivery.png.svg" alt="cash-on-delivery" class="me-3">
-                <img src="./Assets/footersvg/Item → visa.png.svg" alt="Visa" class="me-3">
-                <img src="./Assets/footersvg/Item → mastercard.png.svg" alt="Mastercard" class="me-3">
-              </div>
-            </div>
+      </section>     
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gy-4"> 
+          <!-- Shop Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Shop</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#">Women</a></li>
+              <li class="mb-2"><a href="#">Men</a></li>
+              <li class="mb-2"><a href="#">Kids</a></li>
+              <li class="mb-2"><a href="#">Home Trends</a></li>
+            </ul>
           </div>
 
-          <!-- Copyright -->
-          <div class="copyright mt-5">
-            <p class="text-center mb-0">© 2024 Trends by Meezab. All Rights Reserved.</p>
+                      <!-- Need Help Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Need Help?</h5>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2 d-flex align-items-center">
+                <img src="./Assets/SVG/phone-icon.svg" alt="Phone Icon" class="me-2">
+                <a href="tel:02323233232" class="font-weight-bold">02323233232</a>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img src="./Assets/SVG/phone-icon-alt.svg" alt="Alt Phone Icon" class="me-2">
+                <a href="tel:0322033443" class="font-weight-bold">0322033443</a>
+              </li>
+              <li class="mb-2 d-flex align-items-center">
+                <img src="./Assets/SVG/email-icon.svg" alt="Email Icon" class="me-2">
+                <a href="mailto:info@trends.com" class="font-weight-bold">info@trends.com</a>
+              </li>
+            </ul>
+            <div class="account-options">
+              <a href="#" class="d-block">My Account</a>
+              <a href="./Login.html" class="d-block">Sign In</a>
+            </div>
+          </div>
+          <!-- Customer Care Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Customer Care</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="./contact.html">Contact Us</a></li>
+              <li class="mb-2"><a href="#">Delivery & Orders</a></li>
+              <li class="mb-2"><a href="#">Terms and Conditions</a></li>
+              <li class="mb-2"><a href="#">Payment Guide</a></li>
+              <li class="mb-2"><a href="#">Privacy Policy</a></li>
+              <li class="mb-2"><a href="#">Track My Order</a></li>
+              <li class="mb-2"><a href="#">Returns & Exchange</a></li>
+            </ul>
+          </div>
+
+          <!-- Social & Payment Column -->
+          <div class="col-lg-3 col-sm-6">
+            <h5 class="text-uppercase mb-4">Follow Us</h5>
+            <div class="social-icons mb-4">
+              <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <h5 class="text-uppercase mb-4">We Accept</h5>
+            <div class="payment-methods d-flex align-items-center">
+              <img src="./Assets/footersvg/Item → cash-on-delivery.png.svg" alt="cash-on-delivery" class="me-3">
+              <img src="./Assets/footersvg/Item → visa.png.svg" alt="Visa" class="me-3">
+              <img src="./Assets/footersvg/Item → mastercard.png.svg" alt="Mastercard" class="me-3">
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper JS -->
 
-    <script src="./js/Script.js"></script>
-    <script src="./js/slider.js"></script>
-    <script src="./js/addtocart.js"></script>
-  </body>
+        <!-- Copyright -->
+        <div class="copyright mt-5">
+          <p class="text-center mb-0">© 2024 Trends by Meezab. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    
+    </div>
+
+      <!-- bootstrap - 5 - js  -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"crossorigin="anonymous"></script>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <!--swiper - js - code-->
+      <script src="./js/swiper.js"></script>
+      <script src="./js/Cartstate.js"></script>
+      <script src="./js/ProductPage.js"></script>
+      <script src="./js/Loader.js"></script>
+
+
+      <!-- custom - code-script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".testimonial-track");
+  const cards = document.querySelectorAll(".testimonial-card");
+  const prevButton = document.querySelector(".prev-button");
+  const nextButton = document.querySelector(".next-button");
+
+  let currentIndex = 0;
+  const cardWidth = 100 / (window.innerWidth >= 768 ? 2 : 1); // Show 2 cards on desktop, 1 on mobile
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${currentIndex * cardWidth}%)`;
+  }
+
+  prevButton.addEventListener("click", () => {
+    currentIndex = Math.max(currentIndex - 1, 0);
+    updateSlider();
+  });
+
+  nextButton.addEventListener("click", () => {
+    const maxIndex = cards.length - (window.innerWidth >= 768 ? 2 : 1);
+    currentIndex = Math.min(currentIndex + 1, maxIndex);
+    updateSlider();
+  });
+
+  // Update cards shown on window resize
+  window.addEventListener("resize", () => {
+    const maxIndex = cards.length - (window.innerWidth >= 768 ? 2 : 1);
+    currentIndex = Math.min(currentIndex, maxIndex);
+    updateSlider();
+  });
+});
+
+    </script>
+</body>
 </html>

@@ -23,7 +23,8 @@
     />
     <!-- Account-dashboard - css -->
      <link rel="stylesheet" href="css/dashboard.css">
-
+     <!-- productPage - css -->
+      <link rel="stylesheet" href="css/productlist.css">
   </head>
 <body>
     <!-- header -->
@@ -425,15 +426,103 @@
           <!-- Main Content -->
           <div class="col-md-9">
             <div class="dashboard-content">
-              <p class="mb-4">
-                Hello <strong>alifin58</strong> (not alifin58? <a href="#logout">Log out</a>)
-              </p>
-              <p>
-                From your account dashboard you can view your 
-                <a href="#orders">recent orders</a>, manage your 
-                <a href="#addresses">shipping and billing addresses</a>, and 
-                <a href="#account-details">edit your password and account details</a>.
-              </p>
+                <div class="product-container">
+                    <!-- Product Card 1 -->
+                    <a href="Product_Page.html" class="product-card">
+                      <img
+                        src="./Assets/Articleone.png"
+                        alt="Product Image"
+                        class="product-image"
+                        loading="lazy"
+                      />
+                      <article class="product-info">
+                        <h2 class="product-title">Article 1</h2>
+                        <p class="product-price">
+                          <span class="sale-price" data-price="99">Rs 99.00</span>
+                          <span class="original-price">Rs 199.00</span>
+                        </p>
+                        <button
+                          class="view-more-add add-to-cart"
+                          data-product="Article 1"
+                          data-price="99"
+                        >
+                          Add to Cart
+                        </button>
+                      </article>
+                    </a>
+                
+                    <!-- Product Card 2 -->
+                    <a href="Product_Page.html" class="product-card">
+                      <img
+                        src="./Assets/Articlestwo.png"
+                        alt="Product Image"
+                        class="product-image"
+                        loading="lazy"
+                      />
+                      <article class="product-info">
+                        <h2 class="product-title">Article 2</h2>
+                        <p class="product-price">
+                          <span class="sale-price">RS 149.00</span>
+                          <span class="original-price">RS 249.00</span>
+                        </p>
+                        <button
+                          class="view-more-add add-to-cart"
+                          data-product="Article 2"
+                          data-price="149"
+                        >
+                          Add to Cart
+                        </button>
+                      </article>
+                    </a>
+                
+                    <!-- Product Card 3 -->
+                    <a href="Product_Page.html" class="product-card">
+                      <img
+                        src="./Assets/Articlesthree.png"
+                        alt="Product Image"
+                        class="product-image"
+                        loading="lazy"
+                      />
+                      <article class="product-info">
+                        <h2 class="product-title">Article 3</h2>
+                        <p class="product-price">
+                          <span class="sale-price">RS 199.00</span>
+                          <span class="original-price">RS 399.00</span>
+                        </p>
+                        <button
+                          class="view-more-add add-to-cart"
+                          data-product="Article 3"
+                          data-price="199"
+                        >
+                          Add to Cart
+                        </button>
+                      </article>
+                    </a>
+                
+                    <!-- Product Card 4 -->
+                    <a href="Product_Page.html" class="product-card">
+                      <img
+                        src="./Assets/Articefour.png"
+                        alt="Product Image"
+                        class="product-image"
+                        loading="lazy"
+                      />
+                      <article class="product-info">
+                        <h2 class="product-title">Article 4</h2>
+                        <p class="product-price">
+                          <span class="sale-price">RS 299.00</span>
+                          <span class="original-price">RS 499.00</span>
+                        </p>
+                        <button
+                          class="view-more-add add-to-cart"
+                          data-product="Article 4"
+                          data-price="299"
+                        >
+                          Add to Cart
+                        </button>
+                      </article>
+                    </a>
+                  </div>
             </div>
           </div>
         </div>
