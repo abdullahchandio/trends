@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TrendsWebsite</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Products</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Swiper CSS -->
     <link
@@ -21,22 +19,23 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    <!-- Account-dashboard - css -->
-     <link rel="stylesheet" href="css/dashboard.css">
-     <!-- productPage - css -->
-      <link rel="stylesheet" href="css/productlist.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/search.css">
+
   </head>
-<body>
-    <!-- header -->
+  <body>
+    <!-- loader -->
     <div id="loading-wrapper">
-        <div id="logo-wrapper">
-          <img id="logo" src="./Assets/Logo.png" alt="Logo">
-          <div id="loading-text">LOADING</div>
-        </div>
-        <div id="loading-content"></div>
+      <div id="logo-wrapper">
+        <img id="logo" src="./Assets/Logo.png" alt="Logo" />
+        <div id="loading-text">LOADING</div>
       </div>
-    <!--header  -->
-      <!-- website-header -->
+      <div id="loading-content"></div>
+    </div>
+    <!-- header -->
       <header>
         <div class="tagline">
           <span>Get free shipping</span>
@@ -357,7 +356,10 @@
               <div class="px-4 py-3 border-bottom">
                   <div class="position-relative">
                       <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
-                      <input type="search" class="form-control ps-5 search-bar" placeholder="Search products">
+                      <input type="search" class="form-control ps-5 search-bar" placeholder="Search products" 
+                      id="searchInput"
+                      placeholder="Search"
+                      aria-label="Search">
                   </div>
               </div>
 
@@ -467,146 +469,42 @@
               </div>
           </div>
   </header>
-
-    <div class="container py-5">
-        <h1 class="mb-5">MY ACCOUNT</h1>
-        
-        <div class="row">
-          <!-- Left Sidebar with overlay effect -->
-          <div class="col-md-3 position-relative">
-            <div class="account-sidebar">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link " href="account_dashboard.html">DASHBOARD</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="account_orders.html">ORDERS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="addresses.html">ADDRESSES</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="account-details.html">ACCOUNT DETAILS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="wishlist.html">WISHLIST</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./Login.html">LOGOUT</a>
-                </li>
-              </ul>
-              <!-- Overlay effect -->
-              <div class="sidebar-overlay"></div>
-            </div>
-          </div>
-      
-          <!-- Main Content -->
-          <div class="col-md-9">
-            <div class="dashboard-content">
-                <div class="product-container">
-                    <!-- Product Card 1 -->
-                    <a href="Product_Page.html" class="product-card">
-                      <img
-                        src="./Assets/Articleone.png"
-                        alt="Product Image"
-                        class="product-image"
-                        loading="lazy"
-                      />
-                      <article class="product-info">
-                        <h2 class="product-title">Article 1</h2>
-                        <p class="product-price">
-                          <span class="sale-price" data-price="99">Rs 99.00</span>
-                          <span class="original-price">Rs 199.00</span>
-                        </p>
-                        <button
-                          class="view-more-add add-to-cart"
-                          data-product="Article 1"
-                          data-price="99"
-                        >
-                          Add to Cart
-                        </button>
-                      </article>
-                    </a>
-                
-                    <!-- Product Card 2 -->
-                    <a href="Product_Page.html" class="product-card">
-                      <img
-                        src="./Assets/Articlestwo.png"
-                        alt="Product Image"
-                        class="product-image"
-                        loading="lazy"
-                      />
-                      <article class="product-info">
-                        <h2 class="product-title">Article 2</h2>
-                        <p class="product-price">
-                          <span class="sale-price">RS 149.00</span>
-                          <span class="original-price">RS 249.00</span>
-                        </p>
-                        <button
-                          class="view-more-add add-to-cart"
-                          data-product="Article 2"
-                          data-price="149"
-                        >
-                          Add to Cart
-                        </button>
-                      </article>
-                    </a>
-                
-                    <!-- Product Card 3 -->
-                    <a href="Product_Page.html" class="product-card">
-                      <img
-                        src="./Assets/Articlesthree.png"
-                        alt="Product Image"
-                        class="product-image"
-                        loading="lazy"
-                      />
-                      <article class="product-info">
-                        <h2 class="product-title">Article 3</h2>
-                        <p class="product-price">
-                          <span class="sale-price">RS 199.00</span>
-                          <span class="original-price">RS 399.00</span>
-                        </p>
-                        <button
-                          class="view-more-add add-to-cart"
-                          data-product="Article 3"
-                          data-price="199"
-                        >
-                          Add to Cart
-                        </button>
-                      </article>
-                    </a>
-                
-                    <!-- Product Card 4 -->
-                    <a href="Product_Page.html" class="product-card">
-                      <img
-                        src="./Assets/Articefour.png"
-                        alt="Product Image"
-                        class="product-image"
-                        loading="lazy"
-                      />
-                      <article class="product-info">
-                        <h2 class="product-title">Article 4</h2>
-                        <p class="product-price">
-                          <span class="sale-price">RS 299.00</span>
-                          <span class="original-price">RS 499.00</span>
-                        </p>
-                        <button
-                          class="view-more-add add-to-cart"
-                          data-product="Article 4"
-                          data-price="299"
-                        >
-                          Add to Cart
-                        </button>
-                      </article>
-                    </a>
-                  </div>
-            </div>
-          </div>
+    <!-- main-content -->
+    <div class="container">
+      <!-- Search Section -->
+      <div class="search-container">
+        <h1 class="mb-4">Search our store</h1>
+        <div class="search-input">
+          <input
+                  class="form-control search-bar"
+                  type="search"
+                  id="searchInput"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
         </div>
       </div>
-      
-          <!-- Footer -->
-          <footer class="footer">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="./product-listing.html">Products</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Search Results
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Products Grid -->
+      <div class="row product-grid" id="productsContainer">
+        <!-- Products will be dynamically inserted here -->
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
             <div class="container">
               <div class="row gy-4"> <!-- Changed to gy-4 for better vertical spacing -->
                 <!-- Shop Column -->
@@ -676,21 +574,99 @@
     
               <!-- Copyright -->
               <div class="copyright mt-5">
-                <p class="text-center mb-0">© 2025 Trends by Meezab. All Rights Reserved.</p>
+                <p class="text-center mb-0">© 2024 Trends by Meezab. All Rights Reserved.</p>
               </div>
             </div>
-          </footer>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-          crossorigin="anonymous"
-        ></script>
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- Initialize Swiper JS -->
+    </footer>
+    <!-- cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const mobileMenu = document.getElementById("mobileMenu");
+        const offcanvasInstance = new bootstrap.Offcanvas(mobileMenu);
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 992 && mobileMenu.classList.contains("show")) {
+            offcanvasInstance.hide();
+          }
+        });
+      
+      // Sample product data
+      const products = [
+        {
+          id: 1,
+          name: "Article 1",
+          image: "./Assets/Articleone.png",
+          price: 99.0,
+          originalPrice: 199.0,
+        },
+        {
+          id: 2,
+          name: "Article 2",
+          image: "./Assets/Articlestwo.png",
+          price: 149.0,
+          originalPrice: 249.0,
+        },
+        {
+          id: 3,
+          name: "Article 3",
+          image: "./Assets/Articlesthree.png",
+          price: 199.0,
+          originalPrice: 399.0,
+        },
+        {
+          id: 4,
+          name: "Article 4",
+          image: "./Assets/Articefour.png",
+          price: 299.0,
+          originalPrice: 499.0,
+        },
+      ];
+
+      // Function to render products
+      function renderProducts(productsToRender) {
+        const container = document.getElementById("productsContainer");
+        container.innerHTML = "";
+
+        productsToRender.forEach((product) => {
+          const productHTML = `
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-card">
+                            <img src="${product.image}" alt="${
+            product.name
+          }" class="product-image">
+                            <h5>${product.name}</h5>
+                            <div class="price-container">
+                                <span class="sale-price">RS ${product.price.toFixed(
+                                  2
+                                )}</span>
+                                <span class="original-price">RS ${product.originalPrice.toFixed(
+                                  2
+                                )}</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart mt-3">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+          container.innerHTML += productHTML;
+        });
+      }
+
+      // Search functionality
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredProducts = products.filter((product) =>
+          product.name.toLowerCase().includes(searchTerm)
+        );
+        renderProducts(filteredProducts);
+      });
+
+      // Initial render
+      renderProducts(products);
+    </script>
     
-        <script src="./js/swiper.js"></script>
-        <script src="./js/Cartstate.js"></script>
-        <script src="./js/Loader.js"></script>
-</body>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/Cartstate.js"></script>
+    <script src="./js/Loader.js"></script>
+  </body>
 </html>

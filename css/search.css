@@ -1,0 +1,53 @@
+
+.search-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.search-input {
+  max-width: 500px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.breadcrumb {
+  margin: 20px 0;
+}
+
+.product-grid {
+  margin-top: 40px;
+}
+
+.product-card {
+  padding: 15px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 10px;
+}
+
+.sale-price {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: #dc3545;
+  border: none;
+  width: 100%;
+}
+
+.add-to-cart:hover {
+  background-color: #c82333;
+}
