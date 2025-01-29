@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Simulate loading completion after 3 seconds (optional)
     setTimeout(() => {
       document.getElementById("loading-wrapper").style.display = "none";
-    }, 3000);
+    }, 2000);
   });
   
