@@ -83,7 +83,7 @@
             </div>
             <div class="icon-item">
               <a
-                href="#"
+                href="./account_orders.html"
                 class="nav-link d-flex flex-column align-items-center"
               >
                 <svg
@@ -153,7 +153,7 @@
             </div>
             <div class="icon-item">
               <a
-                href="#"
+                href="./shop_cart.html"
                 class="d-flex align-items-center text-decoration-none text-dark flex-column "
               >
                 <svg
@@ -188,46 +188,76 @@
           </div>
         </div>
       </div>        
-      <!-- main-navabr-start -->
       <!-- Desktop Navigation -->
       <nav class="navbar navbar-expand-lg d-none d-lg-block">
         <div class="container">
           <div class="placeholder-box"></div>
-      
+
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav align-items-center">
+              <!-- Dropdown: All Products -->
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    All PRODUCTS
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Items 1</a></li>
-                    <li><a class="dropdown-item" href="#">Items 1</a></li>
-                  </ul>
-                </li>
+                <a class="nav-link dropdown-toggle" href="./product-listing.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ALL PRODUCTS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Item 1</a></li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#">Item 2</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./product-listing.html">Sub-Item 1</a></li>
+                      <li><a class="dropdown-item" href="./product-listing.html">Sub-Item 2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- Dropdown: For Women -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   FOR WOMEN
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Items 1</a></li>
-                  <li><a class="dropdown-item" href="#">Items 1</a></li>
+                  <li><a class="dropdown-item" href="#">Item 1</a></li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#">Item 2</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Sub-Item 1</a></li>
+                      <li><a class="dropdown-item" href="#">Sub-Item 2</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
+              <!-- For Men -->
               <li class="nav-item">
                 <a class="nav-link" href="#">FOR MEN</a>
               </li>
+              <!-- For Kids -->
               <li class="nav-item">
                 <a class="nav-link" href="#">FOR KIDS</a>
               </li>
+              <!-- Home Appliances -->
               <li class="nav-item">
                 <a class="nav-link" href="#">HOME APPLIANCES</a>
               </li>
-             
-              <li class="nav-item">
-                <a class="nav-link" href="./product-listing.html">BRANDS</a>
+              <!-- Brands -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  BRANDS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./product-listing.html">Item 1</a></li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#">Item 2</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Sub-Item 1</a></li>
+                      <li><a class="dropdown-item" href="#">Sub-Item 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Item 3</a></li>
+                </ul>
               </li>
             </ul>
+            <!-- Search Form -->
             <form class="search-form ms-auto" id="searchForm">
               <input
                 class="form-control search-bar"
@@ -240,7 +270,6 @@
           </div>
         </div>
       </nav>
-
       <!-- Mobile Navigation -->
       <nav class="navbar bg-white border-bottom py-2 d-lg-none"">
         <div class="container-fluid px-3">
@@ -248,7 +277,6 @@
             <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                 <i class="bi bi-list fs-4"></i>
             </button>
-
             <!-- Logo -->
             <a class="navbar-brand m-0" href="/">
                 <img src="./Assets/Logo.png" alt="Logo" height="32">
@@ -335,18 +363,39 @@
             <div class="py-2">
               <!-- Pages Dropdown - 1 -->
               <div class="nav-item">
-                  <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
-                          data-bs-toggle="collapse" 
-                          data-bs-target="#pagesSubmenu">
-                          ALL PRODUCTS
+                <button 
+                class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#pagesSubmenu" 
+                aria-expanded="false">
+                ALL PRODUCTS
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <div class="collapse" id="pagesSubmenu" data-bs-parent="#mobileMenu">
+                <div class="py-2">
+                  <!-- Item 1 with Nested Dropdown -->
+                  <div class="nav-item">
+                    <button 
+                      class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#item1Submenu" 
+                      aria-expanded="false">
+                      Items 1
                       <i class="bi bi-chevron-right"></i>
-                  </button>
-                  <div class="collapse" id="pagesSubmenu">
-                      <div class="py-2">
-                          <a href="#" class="nav-link px-4 py-2">Items 1</a>
-                          <a href="#" class="nav-link px-4 py-2">Items 2</a>
+                    </button>
+                    <div class="collapse" id="item1Submenu" data-bs-parent="#pagesSubmenu">
+                      <div class="py-2 ps-4">
+                        <a href="./product-listing.html" class="nav-link px-4 py-2">Sub-item 1</a>
+                        <a href="./product-listing.html" class="nav-link px-4 py-2">Sub-item 2</a>
+                        <a href="./product-listing.html" class="nav-link px-4 py-2">Sub-item 3</a>
                       </div>
+                    </div>
                   </div>
+                  <!-- Item 2 -->
+                  <a href="./product-listing.html" class="nav-link px-4 py-2">Items 2</a>
+                </div>
+              </div>
+              
               </div>
                 <a href="./women.html" class="nav-link px-4 py-2">FOR WOMEN</a>
                 <a href="./men.html" class="nav-link px-4 py-2">FOR MEN</a>
@@ -355,21 +404,49 @@
                 
                 <a href="#" class="nav-link px-4 py-2">SALE</a>
                 <div class="nav-item">
-                  <button class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
-                          data-bs-toggle="collapse" 
-                          data-bs-target="#pagesSub">
-                          BRAND
+                  <!-- Brand Dropdown -->
+                <button 
+                class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#brandSubmenu" 
+                aria-expanded="false">
+                BRAND
+                <i class="bi bi-chevron-right"></i>
+                </button>
+                <div class="collapse" id="brandSubmenu" data-bs-parent="#mobileMenu">
+                <div class="py-2">
+                  <!-- Brand One with Nested Dropdown -->
+                  <div class="nav-item">
+                    <button 
+                      class="nav-link px-4 py-2 d-flex align-items-center justify-content-between w-100 border-0 bg-transparent" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#brandOneSubmenu" 
+                      aria-expanded="false">
+                      Brand One
                       <i class="bi bi-chevron-right"></i>
-                  </button>
-                  <div class="collapse" id="pagesSub">
-                      <div class="py-2">
-                          <a href="#" class="nav-link px-4 py-2">BRAND 1</a>
-                          <a href="#" class="nav-link px-4 py-2">BRAND 2</a>
+                    </button>
+                    <div class="collapse" id="brandOneSubmenu" data-bs-parent="#brandSubmenu">
+                      <div class="py-2 ps-4">
+                        <a href="./product-listing.html" class="nav-link px-4 py-2">Sub-item 1</a>
+                        <a href="./product-listing.html" class="nav-link px-4 py-2">Sub-item 2</a>
+                        <a href="./product-listing.html" class="nav-link px-4 py-2">Sub-item 3</a>
                       </div>
+                    </div>
                   </div>
-              </div>
+                  
+                  <!-- Brand Two (without nesting) -->
+                  <a href="#" class="nav-link px-4 py-2">Brand Two</a>
+                  
+                  <!-- Additional Items -->
+                  <a href="#" class="nav-link px-4 py-2">Brand Three</a>
+                </div>
+                </div>
+
+                </div>
+                
                 <a href="./about.html" class="nav-link px-4 py-2">ABOUT</a>
                 <a href="./contact.html" class="nav-link px-4 py-2">CONTACT</a>
+                </div>
             </div>
 
             <div class="border-top">
@@ -387,10 +464,9 @@
                 </div>
             </div>
         </div>
-      </div>
-    </header>
+</header>
    <!-- main-contact-form -->
-    <div class="contact-form">
+    <div class="contact-form ">
        <!-- main-contact-page -->
     <div class="container py-5">
       <div class="row g-5">
@@ -436,7 +512,7 @@
 
         <!-- Right Column: Contact Form -->
         <div class="col-lg-6">
-          <div class="card">
+          <div class="card shadow">
             <div class="card-body p-4">
               <h2 class="mb-3">Get in Touch</h2>
               <p class="text-muted mb-4">You can reach us anytime</p>
@@ -601,7 +677,7 @@
         <!-- Copyright -->
         <div class="copyright mt-5">
           <p class="text-center mb-0">
-            © 2024 Trends by Meezab. All Rights Reserved.
+            © 2025 Trends by Meezab. All Rights Reserved.
           </p>
         </div>
       </div>

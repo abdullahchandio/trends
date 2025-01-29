@@ -17,10 +17,6 @@ const swiper = new Swiper(".category-swiper", {
   spaceBetween: 20,
   centeredSlides: true,
   loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   breakpoints: {
     // Mobile
     320: {
@@ -65,3 +61,21 @@ const mainSwiper = new Swiper(".main-swiper", {
     swiper: thumbnailSwiper,
   },
 });
+
+
+
+// navabr 
+document.querySelectorAll('.dropdown-submenu').forEach((submenu) => {
+  submenu.addEventListener('mouseenter', (e) => {
+    const dropdownMenu = submenu.querySelector('.dropdown-menu');
+
+    // Adjust position if needed
+    const rect = dropdownMenu.getBoundingClientRect();
+    if (rect.bottom > window.innerHeight) {
+      dropdownMenu.style.top = '-2.5rem'; // Show above if overflowing
+    } else {
+      dropdownMenu.style.top = '0'; // Default position
+    }
+  });
+});
+

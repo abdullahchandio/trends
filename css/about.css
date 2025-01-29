@@ -1,0 +1,42 @@
+
+.banner {
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner-img {
+  object-fit: cover;
+  height: 100%;
+  filter: brightness(0.7);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.feature-icon svg {
+  color: #333;
+}
+
+h2, h3, h4 {
+  font-weight: 600;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+.text-justifys{
+    text-align: justify;
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+}

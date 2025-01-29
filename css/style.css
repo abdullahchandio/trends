@@ -45,23 +45,24 @@ body {
     justify-content: center;
     z-index: 999;
     overflow-y: hidden;
-    
-  }
-  
-  #logo-wrapper {
+
+}
+
+#logo-wrapper {
     position: absolute;
     top: 41%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  #logo {
-    width: 100px; /* Adjust based on your logo size */
+}
+
+#logo {
+    width: 100px;
+    /* Adjust based on your logo size */
     height: auto;
-  }
-  
-  #loading-text {
+}
+
+#loading-text {
     display: block;
     position: absolute;
     top: 70%;
@@ -73,12 +74,13 @@ body {
     font-size: 12px;
     margin-top: 18px;
     font-weight: 600;
-  }
-  
-  #loading-content {
+}
+
+#loading-content {
     display: block;
     position: relative;
-    top: -54px; /* Adjust this value to move the loader higher */
+    top: -54px;
+    /* Adjust this value to move the loader higher */
     width: 170px;
     height: 170px;
     margin: 0 auto;
@@ -87,17 +89,17 @@ body {
     border-bottom-color: var(--primary-color);
     border-radius: 50%;
     animation: loader 2s linear infinite;
-  }
-  
-  #loading-content:after,
-  #loading-content:before {
+}
+
+#loading-content:after,
+#loading-content:before {
     content: "";
     position: absolute;
     border: 3px solid transparent;
     border-radius: 50%;
-  }
-  
-  #loading-content:before {
+}
+
+#loading-content:before {
     border-top-color: var(--Secondary-color);
     border-bottom-color: var(--Secondary-color);
     top: 5px;
@@ -105,9 +107,9 @@ body {
     left: 5px;
     right: 5px;
     animation: loader 3s linear infinite;
-  }
-  
-  #loading-content:after {
+}
+
+#loading-content:after {
     border-top-color: #EECA34;
     border-bottom-color: #EECA34;
     top: 15px;
@@ -115,16 +117,18 @@ body {
     left: 15px;
     right: 15px;
     animation: loader 1.5s linear infinite;
-  }
-  
-  @keyframes loader {
+}
+
+@keyframes loader {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  } 
+}
+
 /* Header section  */
 
 /* topbar css */
@@ -286,33 +290,36 @@ body {
     color: #666;
 }
 
-/* end */
+/* drop-down */
 
+/* end */
 .dropdown-menu {
     margin-top: 0.5rem;
-    border-radius: 0;
+    border-radius: 0.25rem;
     border: none;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     min-width: 200px;
+    position: absolute;
+    display: none;
 }
 
-.dropdown-item {
-    padding: 0.75rem 1.5rem;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-    color: #333;
-    transition: all 0.2s ease;
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+    top: -1.5rem;
+    left: 100%;
+    margin-left: 0.1rem;
 }
 
-.dropdown-item:last-child {
-    border-bottom: none;
+.nav-item.dropdown:hover>.dropdown-menu {
+    display: block;
 }
 
-.dropdown-item:hover {
+.dropdown-submenu>.dropdown-toggle:hover {
     background-color: #f8f9fa;
     color: #000;
 }
 
+/* Navbar Links */
 .nav-link {
     font-weight: 500;
     padding: 1rem 1.5rem;
@@ -950,7 +957,7 @@ body {
 
 @media (max-width: 480px) {
     .testimonial_media {
-        flex-direction: column;
+        flex-direction: column  !important;
     }
 }
 
@@ -984,6 +991,7 @@ body {
     height: 50px;
     margin-bottom: 15px;
 }
+
 /* Features Section */
 .features-container {
     display: grid;
@@ -1037,7 +1045,7 @@ body {
     .features-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .feature-title {
         font-size: 1rem;
     }
@@ -1046,16 +1054,19 @@ body {
         font-size: 0.9rem;
     }
 }
+
 /* footer-section */
 .footer {
     background-color: #f8f8f8;
     padding: 50px 150px;
 }
+
 @media (max-width:768px) {
-    .footer{
-        padding: 40px 10px ;
+    .footer {
+        padding: 40px 10px;
     }
 }
+
 .footer h5 {
     font-size: 18px;
     font-weight: 700;
@@ -1101,13 +1112,15 @@ body {
     color: #000;
     font-weight: 600;
 }
-.account-options > a:first-child{
+
+.account-options>a:first-child {
     text-decoration: none;
     font-size: 20px;
     color: #000;
     font-weight: 600;
 }
-.account-options a{
+
+.account-options a {
     text-decoration: none;
     color: #000;
 }
